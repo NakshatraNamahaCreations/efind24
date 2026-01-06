@@ -1,0 +1,917 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap');
+
+/* Expedited Trademark Registration Page */
+.expedited-trademark-registration-page {
+  background-color: #f5f5f0;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Banner Section */
+.expedited-trademark-registration-banner {
+  position: relative;
+  width: 100%;
+  min-height: 600px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0;
+  overflow: hidden;
+}
+
+.expedited-trademark-registration-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+.expedited-trademark-registration-watermark {
+  top: 130px;
+  left: 40%;
+  z-index: 3;
+  font-size: 220px;
+  font-weight: 600;
+  position: absolute;
+  font-family: 'Poppins', sans-serif;
+  -webkit-transform: translateX(-40%);
+  -ms-transform: translateX(-40%);
+  transform: translateX(-40%);
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: rgba(255, 255, 255, 0.2);
+  text-align: center;
+  pointer-events: none;
+  line-height: 1;
+  opacity: 0.8;
+}
+
+.expedited-trademark-registration-banner .expedited-trademark-registration-watermark {
+  left: 0;
+  right: 0;
+  text-align: center;
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+  top: 100px;
+  -webkit-text-stroke-color: rgba(255, 255, 255, 0.2);
+  -webkit-text-stroke-width: 2px;
+}
+
+.expedited-trademark-registration-title {
+  position: relative;
+  z-index: 3;
+  font-size: 100px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  font-family: 'Libre Baskerville', serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  margin: 0;
+  line-height: 0.833;
+}
+
+/* Responsive Styles */
+@media (max-width: 1400px) {
+  .expedited-trademark-registration-watermark {
+    font-size: 200px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .expedited-trademark-registration-watermark {
+    font-size: 160px;
+  }
+  
+  .expedited-trademark-registration-title {
+    font-size: 80px;
+  }
+}
+
+@media (max-width: 992px) {
+  .expedited-trademark-registration-banner {
+    min-height: 500px;
+  }
+  
+  .expedited-trademark-registration-watermark {
+    font-size: 140px;
+    top: 80px;
+  }
+  
+  .expedited-trademark-registration-title {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .expedited-trademark-registration-banner {
+    min-height: 400px;
+  }
+  
+  .expedited-trademark-registration-watermark {
+    font-size: 100px;
+    top: 60px;
+  }
+  
+  .expedited-trademark-registration-title {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 576px) {
+  .expedited-trademark-registration-banner {
+    min-height: 350px;
+  }
+  
+  .expedited-trademark-registration-watermark {
+    font-size: 80px;
+    top: 50px;
+  }
+  
+  .expedited-trademark-registration-title {
+    font-size: 36px;
+  }
+}
+
+/* Scroll Animation Keyframes */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Animation Classes */
+.fade-in-left {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  will-change: opacity, transform;
+}
+
+.fade-in-left.animated {
+  animation: fadeInLeft 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.fade-in-right {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  will-change: opacity, transform;
+}
+
+.fade-in-right.animated {
+  animation: fadeInRight 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+/* Manage & Track Section */
+.expedited-trademark-registration-manage-track-section {
+  padding: 80px 0;
+  background: #f5f5f0;
+  min-height: 600px;
+}
+
+.expedited-trademark-registration-manage-track-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+/* Left Panel - Information */
+.expedited-trademark-registration-info-panel {
+  padding: 20px 0;
+}
+
+.expedited-trademark-registration-info-heading {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 42px;
+  font-weight: 400;
+  color: #051c2c;
+  line-height: 1.4;
+  margin: 0 0 30px;
+  letter-spacing: -1px;
+}
+
+.expedited-trademark-registration-underline-blue {
+  position: relative;
+  color: #23418B;
+}
+
+.expedited-trademark-registration-underline-blue::after {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: #23418B;
+  border-radius: 2px;
+}
+
+.expedited-trademark-registration-underline-orange {
+  position: relative;
+  color: #23418B;
+}
+
+.expedited-trademark-registration-underline-orange::after {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: #168831;
+  border-radius: 2px;
+}
+
+.expedited-trademark-registration-info-description {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #051c2c;
+  margin: 0 0 40px;
+}
+
+.expedited-trademark-registration-features-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.expedited-trademark-registration-feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.expedited-trademark-registration-feature-item:last-child {
+  margin-bottom: 0;
+}
+
+.expedited-trademark-registration-feature-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.expedited-trademark-registration-feature-icon.expedited-trademark-registration-checkmark {
+  background: #23418B;
+}
+
+.expedited-trademark-registration-feature-icon.expedited-trademark-registration-magnifying {
+  background: #23418B;
+}
+
+.expedited-trademark-registration-feature-icon.expedited-trademark-registration-rocket {
+  background: #23418B;
+}
+
+.expedited-trademark-registration-feature-icon.expedited-trademark-registration-graph {
+  background: #23418B;
+}
+
+.expedited-trademark-registration-feature-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #051c2c;
+  line-height: 1.6;
+  flex: 1;
+  margin: 0;
+}
+
+/* Right Panel - Form */
+.expedited-trademark-registration-form-panel {
+  position: sticky;
+  top: 100px;
+  align-self: start;
+}
+
+.expedited-trademark-registration-form-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 8px 24px rgba(22, 136, 49, 0.15);
+  border: 1px solid #e0e0e0;
+  position: relative;
+}
+
+.expedited-trademark-registration-form-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #23418B 0%, #168831 100%);
+  border-radius: 8px 8px 0 0;
+}
+
+.expedited-trademark-registration-form-title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: #23418B;
+  margin: 0 0 18px;
+  letter-spacing: -0.5px;
+}
+
+.expedited-trademark-registration-form-group {
+  margin-bottom: 16px;
+}
+
+.expedited-trademark-registration-form-label {
+  display: block;
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #051c2c;
+  margin-bottom: 6px;
+}
+
+.expedited-trademark-registration-form-select,
+.expedited-trademark-registration-form-input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  color: #051c2c;
+  background-color: #fff;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.expedited-trademark-registration-form-select:hover,
+.expedited-trademark-registration-form-input:hover {
+  border-color: #23418B;
+}
+
+.expedited-trademark-registration-form-select:focus,
+.expedited-trademark-registration-form-input:focus {
+  outline: none;
+  border-color: #168831;
+  box-shadow: 0 0 0 3px rgba(22, 136, 49, 0.1);
+}
+
+.expedited-trademark-registration-form-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.expedited-trademark-registration-btn-get-quote {
+  width: 100%;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #23418B 0%, #168831 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.expedited-trademark-registration-btn-get-quote:hover {
+  background: linear-gradient(135deg, #168831 0%, #23418B 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(22, 136, 49, 0.25);
+}
+
+.expedited-trademark-registration-form-info-message {
+  margin: -8px 0 16px;
+  padding: 10px;
+  background-color: #f5f5f0;
+  border-radius: 6px;
+  border-left: 3px solid #168831;
+}
+
+.expedited-trademark-registration-info-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  color: #666;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.expedited-trademark-registration-btn-live-chat {
+  width: 100%;
+  padding: 12px 20px;
+  background: #168831;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.expedited-trademark-registration-btn-live-chat:hover {
+  background: #23418B;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(35, 65, 139, 0.25);
+}
+
+/* Responsive Styles for Manage & Track Section */
+@media (max-width: 992px) {
+  .expedited-trademark-registration-manage-track-wrapper {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .expedited-trademark-registration-form-panel {
+    position: relative;
+    top: 0;
+  }
+  
+  .expedited-trademark-registration-info-heading {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .expedited-trademark-registration-manage-track-section {
+    padding: 60px 0;
+  }
+  
+  .expedited-trademark-registration-info-heading {
+    font-size: 32px;
+  }
+  
+  .expedited-trademark-registration-form-card {
+    padding: 25px;
+  }
+  
+  .expedited-trademark-registration-form-title {
+    font-size: 24px;
+  }
+}
+
+/* Process/Content Section */
+.expedited-trademark-registration-process-section {
+  background: #fff;
+  padding: 60px 0;
+}
+
+.expedited-trademark-registration-process-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 40px;
+  align-items: start;
+}
+
+.expedited-trademark-registration-process-content-card {
+  background: #fff;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  min-height: 200px;
+}
+
+.expedited-trademark-registration-card-body {
+  padding: 0;
+}
+
+.expedited-trademark-registration-content-wrapper {
+  padding: 0;
+}
+
+.expedited-trademark-registration-content-main-title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 32px;
+  font-weight: 600;
+  color: #111827;
+  text-align: center;
+  margin: 0 0 16px;
+}
+
+.expedited-trademark-registration-content-block-title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #111827;
+  margin: 24px 0 12px;
+  letter-spacing: -0.5px;
+}
+
+.expedited-trademark-registration-content-subtitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #111827;
+  margin: 20px 0 12px;
+}
+
+.expedited-trademark-registration-content-block-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  line-height: 1.75;
+  color: #374151;
+  margin: 0 0 16px;
+  text-align: justify;
+}
+
+.expedited-trademark-registration-content-link {
+  color: #23418B;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.expedited-trademark-registration-content-link:hover {
+  color: #168831;
+}
+
+.expedited-trademark-registration-benefits-list {
+  list-style: none;
+  padding: 0 0 0 20px;
+  margin: 0 0 16px;
+}
+
+.expedited-trademark-registration-benefit-item {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  line-height: 1.75;
+  color: #374151;
+  margin-bottom: 12px;
+  position: relative;
+  padding-left: 24px;
+  text-align: justify;
+}
+
+.expedited-trademark-registration-benefit-item::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #168831;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Right Column - Related Guides */
+.expedited-trademark-registration-right-column-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: sticky;
+  top: 100px;
+  align-self: start;
+  z-index: 10;
+}
+
+.expedited-trademark-registration-related-guides-card {
+  background: #fff;
+  border-radius: 0.75rem;
+  border: 0;
+  border-width: 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.expedited-trademark-registration-card-header {
+  padding: 0;
+  border-bottom: none;
+  background: #fff;
+}
+
+.expedited-trademark-registration-guides-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #051c2c;
+  padding: 20px;
+  margin: 0;
+  line-height: 1;
+}
+
+.expedited-trademark-registration-card-body {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.expedited-trademark-registration-guides-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 0 20px 20px;
+}
+
+.expedited-trademark-registration-guide-link {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  color: #23418B;
+  text-decoration: underline;
+  padding: 12px 0;
+  display: block;
+  transition: color 0.3s ease;
+}
+
+.expedited-trademark-registration-guide-link:hover {
+  color: #168831;
+}
+
+.expedited-trademark-registration-guide-separator {
+  height: 1px;
+  background-color: #e5e7eb;
+  width: 100%;
+  margin: 0;
+}
+
+/* Responsive Styles for Content Section */
+@media (max-width: 992px) {
+  .expedited-trademark-registration-process-wrapper {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .expedited-trademark-registration-right-column-cards {
+    position: relative;
+    top: 0;
+  }
+  
+  .expedited-trademark-registration-content-main-title {
+    font-size: 28px;
+  }
+  
+  .expedited-trademark-registration-content-block-title {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .expedited-trademark-registration-process-section {
+    padding: 40px 0;
+  }
+  
+  .expedited-trademark-registration-content-main-title {
+    font-size: 24px;
+  }
+  
+  .expedited-trademark-registration-content-block-title {
+    font-size: 20px;
+  }
+  
+  .expedited-trademark-registration-content-block-text,
+  .expedited-trademark-registration-benefit-item {
+    font-size: 13px;
+  }
+}
+
+/* Procedure List */
+.expedited-trademark-registration-procedure-list {
+  margin-top: 30px;
+}
+
+.expedited-trademark-registration-procedure-item {
+  margin-bottom: 30px;
+  padding: 25px;
+  background: #f5f5f0;
+  border-radius: 8px;
+  border-left: 4px solid #23418B;
+  transition: all 0.3s ease;
+}
+
+.expedited-trademark-registration-procedure-item:hover {
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.expedited-trademark-registration-procedure-item:last-child {
+  margin-bottom: 0;
+}
+
+.expedited-trademark-registration-procedure-title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: #23418B;
+  margin: 0 0 12px;
+  letter-spacing: -0.5px;
+}
+
+.expedited-trademark-registration-procedure-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #051c2c;
+  margin: 0;
+  text-align: justify;
+}
+
+/* Responsive Styles for Procedure List */
+@media (max-width: 768px) {
+  .expedited-trademark-registration-procedure-item {
+    padding: 20px;
+    margin-bottom: 25px;
+  }
+  
+  .expedited-trademark-registration-procedure-title {
+    font-size: 20px;
+  }
+  
+  .expedited-trademark-registration-procedure-text {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .expedited-trademark-registration-procedure-item {
+    padding: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .expedited-trademark-registration-procedure-title {
+    font-size: 18px;
+  }
+  
+  .expedited-trademark-registration-procedure-text {
+    font-size: 13px;
+  }
+}
+
+/* FAQ Section */
+.expedited-trademark-registration-faq-section {
+  background: #f5f5f0;
+  padding: 80px 0;
+}
+
+.expedited-trademark-registration-faq-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.expedited-trademark-registration-faq-title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 30px;
+  text-align: center;
+}
+
+.expedited-trademark-registration-accordion {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.expedited-trademark-registration-accordion-item {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.expedited-trademark-registration-accordion-item:last-child {
+  border-bottom: none;
+}
+
+.expedited-trademark-registration-accordion-item.hidden {
+  display: none;
+}
+
+.expedited-trademark-registration-accordion-toggle {
+  width: 100%;
+  padding: 16px 20px;
+  background: #fff;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.expedited-trademark-registration-accordion-toggle:hover {
+  background-color: #f9fafb;
+}
+
+.expedited-trademark-registration-accordion-toggle.active {
+  background-color: #f5f5f0;
+}
+
+.expedited-trademark-registration-accordion-question {
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  line-height: 1.5;
+  flex: 1;
+  padding-right: 20px;
+}
+
+.expedited-trademark-registration-accordion-icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: #6b7280;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.expedited-trademark-registration-accordion-toggle.active .expedited-trademark-registration-accordion-icon {
+  color: #23418B;
+}
+
+.expedited-trademark-registration-accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  background: #fff;
+}
+
+.expedited-trademark-registration-accordion-content.active {
+  max-height: 1000px;
+  padding: 0 20px 16px;
+}
+
+.expedited-trademark-registration-page-content {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #374151;
+  padding-top: 8px;
+}
+
+.expedited-trademark-registration-load-more-faq-btn {
+  width: 100%;
+  padding: 14px 20px;
+  margin-top: 20px;
+  background: transparent;
+  border: 2px solid #23418B;
+  border-radius: 8px;
+  color: #23418B;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.expedited-trademark-registration-load-more-faq-btn:hover {
+  background: #23418B;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(35, 65, 139, 0.25);
+}
+
+/* Responsive Styles for FAQ Section */
+@media (max-width: 768px) {
+  .expedited-trademark-registration-faq-section {
+    padding: 60px 0;
+  }
+  
+  .expedited-trademark-registration-faq-title {
+    font-size: 22px;
+  }
+  
+  .expedited-trademark-registration-accordion-question {
+    font-size: 13px;
+  }
+  
+  .expedited-trademark-registration-page-content {
+    font-size: 13px;
+  }
+}
+

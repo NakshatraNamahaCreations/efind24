@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap');
+
+/* Scroll Animation Keyframes */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-left {
+  opacity: 0;
+}
+
+.fade-in-left.animated {
+  animation: fadeInLeft 0.8s ease-out forwards;
+}
+
+.fade-in-right {
+  opacity: 0;
+}
+
+.fade-in-right.animated {
+  animation: fadeInRight 0.8s ease-out forwards;
+}
+
+.fade-in-up {
+  opacity: 0;
+}
+
+.fade-in-up.animated {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.legal-practices-section {
+  width: 100%;
+  padding: 60px 0 80px;
+  margin-top: -40px;
+  background: #f5f5f0;
+  position: relative;
+  overflow: hidden;
+}
+
+.legal-practices-section::after {
+  content: "";
+  position: absolute;
+  right: -150px;
+  top: -35%;
+  width: 60%;
+  height: 170%;
+  background-image: var(--bg-image);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right center;
+  opacity: 0.2;
+  z-index: 0;
+  pointer-events: none;
+  filter: grayscale(100%) brightness(1.1);
+}
+
+.legal-practices-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.legal-practices-title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 42px;
+  font-weight: 700;
+  color: #168831;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0 0 25px;
+}
+
+.legal-practices-description {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #051c2c;
+  margin: 0 auto 50px;
+  max-width: 800px;
+}
+
+.legal-practices-list {
+  display: flex;
+  gap: 80px;
+  justify-content: center;
+  margin-bottom: 50px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.legal-practices-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.legal-practice-wrapper {
+  border-bottom: 1px solid rgba(35, 65, 139, 0.2);
+}
+
+.legal-practice-wrapper:last-child {
+  border-bottom: none;
+}
+
+.legal-practice-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+  gap: 15px;
+  cursor: pointer;
+}
+
+.legal-practice-name {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #051c2c;
+  flex: 1;
+  text-align: left;
+}
+
+.legal-practice-separator {
+  flex: 1;
+  height: 1px;
+  background: rgba(35, 65, 139, 0.2);
+  margin: 0 10px;
+}
+
+.legal-practice-toggle {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  color: #168831;
+  font-size: 20px;
+  font-weight: 300;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.legal-practice-toggle:hover {
+  color: #23418B;
+  transform: scale(1.1);
+}
+
+.legal-practice-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+  padding: 0;
+}
+
+.legal-practice-content.expanded {
+  max-height: 1000px;
+  padding: 20px 0 15px;
+}
+
+.legal-practice-list {
+  display: flex;
+  gap: 60px;
+  text-align: left;
+}
+
+.legal-practice-list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex: 1;
+}
+
+.legal-practice-list li {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  line-height: 2;
+  color: #051c2c;
+  padding: 3px 0;
+}
+
+.legal-practices-footer {
+  margin-top: 40px;
+}
+
+.legal-practices-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 32px;
+  border: 2px solid #23418B;
+  background: #23418B;
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.legal-practices-button:hover {
+  background: #168831;
+  border-color: #168831;
+}
+
+.legal-practices-button .icon {
+  fill: currentColor;
+}
+
+@media (max-width: 991px) {
+  .legal-practices-list {
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  .legal-practices-column {
+    width: 100%;
+  }
+  
+  .legal-practices-title {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .legal-practices-section {
+    padding: 60px 0;
+  }
+  
+  .legal-practices-title {
+    font-size: 28px;
+  }
+  
+  .legal-practices-description {
+    font-size: 14px;
+  }
+  
+  .legal-practice-name {
+    font-size: 14px;
+  }
+}
+

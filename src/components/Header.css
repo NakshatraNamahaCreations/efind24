@@ -1,0 +1,482 @@
+/* .header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+  background: transparent;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap');
+@import '../styles/colors.css';
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+} */
+
+/* ===== HEADER UPPER ===== */
+/* .header-upper {
+  display: flex;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header-contact {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  list-style: none;
+}
+
+.header-contact__link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  /* margin-left: -40px; */
+  /* list-style: none;
+  margin-left: auto; 
+}
+
+.social__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.social__link svg {
+  fill: currentColor;
+} */ 
+
+/* ===== HEADER UNDER ===== */
+/* .header-under {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; */
+  
+  /* padding: 20px 0; */
+  /* padding-left: 30px;
+} */
+
+/* .header-inner {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-inner__logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  margin-left: 50px; */
+  /* gap: 12px; */
+/* }
+
+.logo-icon {
+  font-size: 32px;
+  color: #168831 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.logo-text {
+  font-size: 28px;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  color: #23418B !important;
+  letter-spacing: -0.5px;
+}
+
+.delimiter {
+  width: 1px;
+  height: 30px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.header-inner__tel {
+  font-size: 30px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border: 2px solid #fff;
+  background: transparent;
+  color: #fff;
+  text-decoration: none;
+}
+
+.header-appointment {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  transition: opacity 0.3s ease;
+}
+
+.header-appointment:hover {
+  opacity: 0.8;
+}
+
+.header-appointment .icon {
+  fill: currentColor;
+  width: 21px;
+  height: 12px;
+}
+
+.nav-drop {
+  margin-left: 30px;
+}
+
+.menu {
+  display: flex;
+  gap: 60px;
+  margin-left: 190px;
+  list-style: none;
+}
+
+.menu__link {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+}
+
+.menu__item.has-submenu {
+  position: relative;
+}
+
+.dropdown-arrow {
+  font-size: 10px;
+  transition: transform 0.3s ease;
+  display: inline-block;
+  color: #fff !important;
+}
+
+.dropdown-arrow.open {
+  transform: rotate(180deg);
+} */
+
+/* Services Dropdown Menu */
+/* .services-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 0;
+  padding-top: 8px;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  list-style: none;
+  padding: 8px 0;
+  min-width: 280px;
+  max-height: 400px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 1001;
+  animation: fadeInDown 0.3s ease;
+}
+
+.services-dropdown-menu::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background-color: transparent;
+}
+
+.services-dropdown-item {
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.services-dropdown-item:last-child {
+  border-bottom: none;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.services-dropdown-link {
+  display: block;
+  padding: 12px 20px;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.services-dropdown-link:hover {
+  background-color: #f0f7f2;
+  color: #168831;
+  padding-left: 24px;
+  font-weight: 500;
+} */
+
+/* Scrollbar styling for dropdown */
+/* .services-dropdown-menu::-webkit-scrollbar {
+  width: 8px;
+}
+
+.services-dropdown-menu::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.services-dropdown-menu::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.services-dropdown-menu::-webkit-scrollbar-thumb:hover {
+  background: #555;
+} */
+
+/* ===== RESPONSIVE ===== */
+/* @media (max-width: 991px) {
+  .visible--md,
+  .visible--lg {
+    display: none !important;
+  }
+} */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  max-width: 1400px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* ================= HEADER ================= */
+.header-modern {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* ================= TOP BAR ================= */
+.top-bar {
+  background: #0b1220;
+  color: #e5e7eb;
+  font-size: 13px;
+}
+
+.top-bar-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 38px;
+}
+
+.top-social a {
+  color: #e5e7eb;
+  margin-left: 14px;
+  text-decoration: none;
+  opacity: 0.75;
+}
+
+.top-social a:hover {
+  opacity: 1;
+}
+
+/* ================= NAV ================= */
+.nav-glass {
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 76px;
+}
+
+/* ================= LOGO ================= */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.logo-icon {
+  font-size: 32px;
+  color: #168831 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.logo-text {
+  font-size: 28px;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  color: #23418B !important;
+  letter-spacing: -0.5px;
+}
+
+/* ================= MENU ================= */
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 42px;
+  list-style: none;
+}
+
+.menu a,
+.dropdown-trigger {
+  text-decoration: none;
+  color: #1f2937;
+  font-size: 15px;
+  font-weight: 500;
+  position: relative;
+  cursor: pointer;
+}
+
+/* underline */
+.menu a::after,
+.dropdown-trigger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  height: 2px;
+  width: 0;
+  background: linear-gradient(90deg, #168831, #23418b);
+  transition: width 0.3s ease;
+}
+
+.menu a:hover::after,
+.dropdown-trigger:hover::after {
+  width: 100%;
+}
+
+/* ================= DROPDOWN ================= */
+.dropdown {
+  position: relative;
+}
+
+.arrow {
+  font-size: 11px;
+  margin-left: 6px;
+  transition: transform 0.3s ease;
+}
+
+.arrow.open {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 120%;
+  left: 0;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+  min-width: 320px;
+  padding: 10px 0;
+  animation: fadeDrop 0.25s ease;
+}
+
+.dropdown-menu li {
+  list-style: none;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 14px 22px;
+  font-size: 14px;
+  color: #374151;
+}
+
+.dropdown-menu a:hover {
+  background: #f0f7f2;
+  color: #168831;
+  padding-left: 28px;
+}
+
+/* ================= CTA ================= */
+.cta {
+  padding: 10px 24px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #168831, #23418b);
+  color: #ffffff !important;
+}
+
+.cta::after {
+  display: none;
+}
+
+/* ================= ANIMATION ================= */
+@keyframes fadeDrop {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 991px) {
+  .menu {
+    display: none; /* mobile menu later */
+  }
+}

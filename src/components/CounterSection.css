@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap');
+
+.counter-wrapper {
+  width: 100%;
+  padding: 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.about_counter {
+  top: -80px;
+  z-index: 2;
+  max-width: 1200px;
+  width: 100%;
+  position: relative;
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 60px 40px 90px 40px;
+  box-shadow: 0px 30px 60px 0px rgba(0, 0, 0, 0.04);
+  -webkit-box-shadow: 0px 30px 60px 0px rgba(0, 0, 0, 0.04);
+  margin: 0 auto;
+}
+
+.about_counter_list {
+  width: 100%;
+}
+
+.about_counter_list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.about_counter_list li {
+  list-style: none;
+  display: inline-block;
+  flex: 1;
+  text-align: center;
+  position: relative;
+}
+
+.about_counter_list li:after {
+  top: 0;
+  right: 0;
+  width: 1px;
+  content: "";
+  height: 115%;
+  position: absolute;
+  background-color: #f1f1f1;
+}
+
+.about_counter_list li:last-child:after {
+  display: none;
+}
+
+.counter_icon_text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.counter_icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.counter_icon img {
+  display: block;
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+}
+
+.ul-li {
+  width: 100%;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.counter_number {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.counter_number .counter-value,
+.counter_number strong {
+  font-size: 26px;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  line-height: 1.2;
+}
+
+.counter_number strong {
+  display: inline;
+  margin-left: 2px;
+}
+
+.counter_number p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  color: #666;
+  margin: 0;
+  margin-top: 5px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.pera-content {
+  margin: 0;
+}
+
+@media (max-width: 991px) {
+  .about_counter_list ul {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  
+  .about_counter_list li {
+    flex: 0 0 calc(50% - 15px);
+  }
+}
+
+@media (max-width: 768px) {
+  .about_counter {
+    padding: 60px 0;
+  }
+  
+  .about_counter_list ul {
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .about_counter_list li {
+    flex: 1;
+  }
+  
+  .counter_icon {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .counter-icon-symbol {
+    font-size: 35px;
+  }
+  
+  .counter_number .counter-value,
+  .counter_number strong {
+    font-size: 24px;
+  }
+}
+

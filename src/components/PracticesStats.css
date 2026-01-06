@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap');
+
+.practices-stats-section {
+  width: 100%;
+  padding: 80px 0;
+  background: #f5f5f0;
+}
+
+.section-headline {
+  text-align: center;
+  margin-bottom: 60px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-headline h4 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 42px;
+  font-weight: 400;
+  color: #051c2c;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+  margin: 0 0 25px;
+}
+
+.section-headline p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #666;
+  margin: 0;
+}
+
+.row {
+  display: flex;
+  /* gap: 60px; */
+  align-items: flex-start;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.col-5 {
+  flex: 0 0 40%;
+  max-width: 40%;
+}
+
+.col-7 {
+  flex: 0 0 60%;
+  max-width: 60%;
+}
+
+.doughnut-chart {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.doughnut-chart canvas {
+  margin: 0 auto;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 950px;
+  max-height: 950px;
+  margin-top: -50px;
+}
+
+.chart-legend {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: -30px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.legend-color {
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+  display: block;
+}
+
+.legend-label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+}
+
+.progress-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.progress-tile {
+  position: relative;
+}
+
+.progress-tile__title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: #051c2c;
+  margin: 0 0 15px;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+}
+
+.progress-bar {
+  position: relative;
+  width: 100%;
+  height: 8px;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.progress-bar__line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  background: linear-gradient(to right, #165aa2 0%, #59daff 100%);
+  -webkit-transition: width 1.5s ease;
+  transition: width 1.5s ease;
+  border-radius: 6px;
+}
+
+.progress-bar__line.animated {
+  transition: width 1.5s ease;
+}
+
+.progress-tile__num {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #051c2c;
+  display: block;
+}
+
+@media (max-width: 991px) {
+  .row {
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .col-5,
+  .col-7 {
+    flex: 1;
+    max-width: 100%;
+  }
+  
+  .doughnut-chart {
+    height: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .practices-stats-section {
+    padding: 60px 0;
+  }
+  
+  .section-headline h4 {
+    font-size: 32px;
+  }
+  
+  .section-headline p {
+    font-size: 14px;
+  }
+  
+  .progress-tile__title {
+    font-size: 20px;
+  }
+}
+

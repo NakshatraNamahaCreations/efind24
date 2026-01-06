@@ -1,0 +1,840 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap');
+
+/* Copyright Objection Page */
+.copyright-objection-page {
+  background-color: #f5f5f0;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Banner Section */
+.copyright-objection-banner {
+  position: relative;
+  width: 100%;
+  min-height: 600px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0;
+  overflow: hidden;
+}
+
+.copyright-objection-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+.copyright-objection-watermark {
+  top: 130px;
+  left: 40%;
+  z-index: 3;
+  font-size: 220px;
+  font-weight: 600;
+  position: absolute;
+  font-family: 'Poppins', sans-serif;
+  -webkit-transform: translateX(-40%);
+  -ms-transform: translateX(-40%);
+  transform: translateX(-40%);
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: rgba(255, 255, 255, 0.2);
+  text-align: center;
+  pointer-events: none;
+  line-height: 1;
+  opacity: 0.8;
+}
+
+.copyright-objection-banner .copyright-objection-watermark {
+  left: 0;
+  right: 0;
+  text-align: center;
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+  top: 100px;
+  -webkit-text-stroke-color: rgba(255, 255, 255, 0.2);
+  -webkit-text-stroke-width: 2px;
+}
+
+.copyright-objection-title {
+  position: relative;
+  z-index: 3;
+  font-size: 100px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  margin: 0;
+  line-height: 0.833;
+}
+
+/* Responsive Styles */
+@media (max-width: 1400px) {
+  .copyright-objection-watermark {
+    font-size: 200px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .copyright-objection-watermark {
+    font-size: 160px;
+  }
+  
+  .copyright-objection-title {
+    font-size: 80px;
+  }
+}
+
+@media (max-width: 992px) {
+  .copyright-objection-banner {
+    min-height: 500px;
+  }
+  
+  .copyright-objection-watermark {
+    font-size: 120px;
+    top: 80px;
+  }
+  
+  .copyright-objection-title {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .copyright-objection-banner {
+    min-height: 400px;
+  }
+  
+  .copyright-objection-watermark {
+    font-size: 80px;
+    top: 60px;
+  }
+  
+  .copyright-objection-title {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 576px) {
+  .copyright-objection-banner {
+    min-height: 350px;
+  }
+  
+  .copyright-objection-watermark {
+    font-size: 55px;
+    top: 50px;
+  }
+  
+  .copyright-objection-title {
+    font-size: 36px;
+  }
+}
+
+/* Container */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Content Section */
+.copyright-objection-content-section {
+  padding: 80px 0;
+  background: #f5f5f0;
+  min-height: 600px;
+}
+
+.copyright-objection-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+/* Left Panel - Information */
+.copyright-objection-info-panel {
+  padding: 20px 0;
+}
+
+.copyright-objection-heading {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 42px;
+  font-weight: 400;
+  color: #051c2c;
+  line-height: 1.4;
+  margin: 0 0 30px;
+  letter-spacing: -1px;
+}
+
+.copyright-objection-underline {
+  position: relative;
+  color: #23418B;
+}
+
+.copyright-objection-underline::after {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(to right, #23418B, #168831);
+  border-radius: 2px;
+}
+
+.copyright-objection-description {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #051c2c;
+  margin: 0 0 40px;
+}
+
+.copyright-objection-features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.copyright-objection-feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.copyright-objection-feature-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.copyright-objection-feature-icon.checkmark {
+  background: #23418B;
+}
+
+.copyright-objection-feature-icon.document {
+  background: #23418B;
+}
+
+.copyright-objection-feature-icon.briefcase {
+  background: #23418B;
+}
+
+.copyright-objection-feature-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #051c2c;
+  line-height: 1.6;
+  flex: 1;
+}
+
+/* Right Panel - Form */
+.copyright-objection-form-panel {
+  position: sticky;
+  top: 100px;
+}
+
+.copyright-objection-form-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 35px;
+  box-shadow: 0 8px 24px rgba(22, 136, 49, 0.15);
+  border: 1px solid #e0e0e0;
+}
+
+.copyright-objection-form-title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 28px;
+  font-weight: 400;
+  color: #23418B;
+  margin: 0 0 25px;
+  text-align: center;
+  letter-spacing: -0.5px;
+}
+
+.copyright-objection-form-group {
+  margin-bottom: 20px;
+}
+
+.copyright-objection-form-label {
+  display: block;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #051c2c;
+  margin-bottom: 8px;
+}
+
+.copyright-objection-form-select,
+.copyright-objection-form-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  color: #051c2c;
+  background: #fff;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+}
+
+.copyright-objection-form-select:focus,
+.copyright-objection-form-input:focus {
+  outline: none;
+  border-color: #23418B;
+  box-shadow: 0 0 0 3px rgba(35, 65, 139, 0.1);
+}
+
+.copyright-objection-form-select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%2350515a' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  padding-right: 40px;
+}
+
+.copyright-objection-form-buttons {
+  margin-top: 30px;
+}
+
+.copyright-objection-btn-get-quote {
+  width: 100%;
+  padding: 14px 24px;
+  background: linear-gradient(135deg, #23418B 0%, #168831 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(35, 65, 139, 0.3);
+}
+
+.copyright-objection-btn-get-quote:hover {
+  background: linear-gradient(135deg, #1a3370 0%, #0f6b25 100%);
+  box-shadow: 0 6px 16px rgba(35, 65, 139, 0.4);
+  transform: translateY(-2px);
+}
+
+.copyright-objection-btn-get-quote:active {
+  transform: translateY(0);
+}
+
+/* Process Section - Reuse styles from TrademarkRegistration */
+.process-section {
+  padding: 100px 0;
+  background: #fff;
+}
+
+.process-section .container {
+  padding-top: 0;
+}
+
+.process-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 40px;
+  align-items: start;
+}
+
+.process-content-card {
+  background: #fff;
+  border-radius: 0.75rem;
+  border: 0;
+  border-width: 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.process-content-card .card-body {
+  padding: 30px;
+}
+
+.process-main-title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 32px;
+  font-weight: 600;
+  color: #051c2c;
+  margin: 0 0 20px;
+  text-align: center;
+  letter-spacing: -0.5px;
+}
+
+.process-intro {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #051c2c;
+  margin: 0 0 15px;
+  text-align: justify;
+}
+
+.process-content-block {
+  margin-bottom: 40px;
+}
+
+.content-block-title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #051c2c;
+  margin: 0 0 15px;
+  letter-spacing: -0.5px;
+}
+
+.process-content-block h2.content-block-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #051c2c;
+  margin-bottom: 15px;
+}
+
+.process-content-block h3.content-block-title {
+  font-size: 20px;
+  font-weight: 500;
+  color: #051c2c;
+  margin-bottom: 15px;
+}
+
+.content-block-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #051c2c;
+  margin: 0 0 15px;
+  text-align: justify;
+}
+
+.content-block-text strong {
+  color: #23418B;
+  font-weight: 600;
+}
+
+/* Benefits List */
+.benefits-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.benefit-item {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #051c2c;
+  margin-bottom: 12px;
+  padding-left: 30px;
+  position: relative;
+}
+
+.benefit-item::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #168831;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.benefit-item strong {
+  color: #23418B;
+  font-weight: 600;
+}
+
+.copyright-objection-content-link {
+  color: #23418B;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.copyright-objection-content-link:hover {
+  color: #168831;
+  text-decoration: underline;
+}
+
+/* Right Column - Related Guides */
+.right-column-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: sticky;
+  top: 100px;
+}
+
+.related-guides-card {
+  background: #fff;
+  border-radius: 0.75rem;
+  border: 0;
+  border-width: 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+}
+
+.related-guides-card .card-header {
+  padding: 0;
+  border-bottom: none;
+}
+
+.guides-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #051c2c;
+  padding: 20px;
+  margin: 0;
+  line-height: 1;
+}
+
+.related-guides-card .card-body {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.guides-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 0 20px 20px;
+}
+
+.guide-link {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  color: #23418B;
+  text-decoration: none;
+  padding: 12px 0;
+  line-height: 1.5;
+  transition: color 0.3s ease;
+  display: block;
+}
+
+.guide-link:hover {
+  color: #168831;
+}
+
+.guide-separator {
+  border-bottom: 1px solid #e5e7eb;
+  margin: 0;
+}
+
+.guide-separator:last-child {
+  display: none;
+}
+
+/* Scroll Animation Keyframes */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Animation Classes */
+.fade-in-left {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  will-change: opacity, transform;
+}
+
+.fade-in-left.animated {
+  animation: fadeInLeft 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.fade-in-right {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  will-change: opacity, transform;
+}
+
+.fade-in-right.animated {
+  animation: fadeInRight 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  will-change: opacity, transform;
+}
+
+.fade-in-up.animated {
+  animation: fadeInUp 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+/* Responsive Styles for Content Section */
+@media (max-width: 992px) {
+  .copyright-objection-wrapper {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .copyright-objection-form-panel {
+    position: relative;
+    top: 0;
+  }
+  
+  .copyright-objection-heading {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .copyright-objection-content-section {
+    padding: 60px 0;
+  }
+  
+  .copyright-objection-heading {
+    font-size: 32px;
+  }
+  
+  .copyright-objection-form-card {
+    padding: 25px;
+  }
+  
+  .copyright-objection-form-title {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 576px) {
+  .copyright-objection-content-section {
+    padding: 40px 0;
+  }
+  
+  .copyright-objection-heading {
+    font-size: 28px;
+  }
+  
+  .copyright-objection-description {
+    font-size: 15px;
+  }
+  
+  .copyright-objection-feature-text {
+    font-size: 15px;
+  }
+  
+  .copyright-objection-form-card {
+    padding: 20px;
+  }
+
+  .process-section {
+    padding: 60px 0;
+  }
+
+  .process-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .right-column-cards {
+    position: relative;
+    top: 0;
+    margin-top: 30px;
+  }
+
+  .process-main-title {
+    font-size: 28px;
+  }
+
+  .content-block-title {
+    font-size: 20px;
+  }
+
+  .process-intro,
+  .content-block-text,
+  .benefit-item {
+    font-size: 14px;
+  }
+}
+
+/* FAQ Section */
+.faq-section {
+  background-color: #f5f5f0;
+  padding: 60px 0;
+  width: 100%;
+}
+
+.faq-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.faq-title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 24px;
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+}
+
+.accordion-item {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.accordion-item:last-child {
+  border-bottom: none;
+}
+
+.accordion-item.hidden {
+  display: none;
+}
+
+.accordion-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.accordion-toggle:hover {
+  background-color: #f9fafb;
+}
+
+.accordion-toggle.active {
+  background-color: #f9fafb;
+}
+
+.accordion-question {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #1f2937;
+  line-height: 1.4;
+  flex: 1;
+  padding-right: 20px;
+}
+
+.accordion-icon {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #6b7280;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.accordion-content {
+  display: none;
+  padding-top: 8px;
+}
+
+.accordion-content.active {
+  display: block;
+  padding-bottom: 16px;
+}
+
+.page-content {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  color: #374151;
+  line-height: 1.6;
+  padding-top: 8px;
+}
+
+.faq-list {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0;
+  padding-left: 20px;
+}
+
+.faq-list li {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  color: #374151;
+  line-height: 1.6;
+  margin-bottom: 8px;
+  padding-left: 8px;
+}
+
+.load-more-faq-btn {
+  margin-top: 20px;
+  width: auto;
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .faq-section {
+    padding: 40px 0;
+  }
+
+  .faq-title {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .accordion-question {
+    font-size: 13px;
+  }
+
+  .page-content {
+    font-size: 13px;
+  }
+}
+

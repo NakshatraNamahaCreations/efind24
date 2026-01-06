@@ -1,0 +1,529 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap'); */
+
+/* Scroll Animation Keyframes */
+/* @keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-left {
+  opacity: 0;
+}
+
+.fade-in-left.animated {
+  animation: fadeInLeft 0.8s ease-out forwards;
+}
+
+.fade-in-right {
+  opacity: 0;
+}
+
+.fade-in-right.animated {
+  animation: fadeInRight 0.8s ease-out forwards;
+}
+
+.fade-in-up {
+  opacity: 0;
+}
+
+.fade-in-up.animated {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.service-offerings-section {
+  width: 100%;
+  padding: 80px 0;
+  background: #f5f5f0;
+}
+
+.offerings-headline {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.offerings-title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 42px;
+  font-weight: 400;
+  color: #23418B;
+  margin: 0;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+}
+
+.offerings-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+  row-gap: 30px;
+  list-style: none;
+  margin: 0 0 50px;
+  padding: 0;
+  padding-left: 40px;
+}
+
+.offerings-list--gap {
+  gap: 4px;
+}
+
+.offerings-item {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 991px) {
+  .offerings-item {
+    flex: 0 0 calc(50% - 15px);
+  }
+}
+
+@media (max-width: 768px) {
+  .offerings-item {
+    flex: 0 0 100%;
+  }
+}
+
+.text--center {
+  text-align: center;
+}
+
+.offerings-card {
+  position: relative;
+  padding: 20px 18px;
+  background: #ffffff !important;
+  border: 1px solid #e0e0e0;
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.offerings-card:hover {
+  background: #ffffff !important;
+  border-color: #168831;
+  box-shadow: 0 8px 24px rgba(22, 136, 49, 0.15);
+  transform: translateY(-5px);
+}
+
+.offerings-card:hover .offerings-card__title,
+.offerings-card:hover .offerings-text-wrap p {
+  color: #051c2c;
+}
+
+.offerings-card__image {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.offerings-card__image img {
+  transition: filter 0.3s ease;
+  filter: brightness(0) saturate(100%) invert(42%) sepia(98%) saturate(1352%) hue-rotate(95deg) brightness(0.95) contrast(0.9);
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+}
+
+.offerings-card__title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #051c2c;
+  margin: 0 0 15px;
+  line-height: 1.4;
+  transition: color 0.3s ease;
+}
+
+.offerings-text-wrap {
+  margin-bottom: 0;
+}
+
+.offerings-text-wrap p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #666;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.offerings-card__link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  text-decoration: none;
+  transition: all 0.35s ease;
+  pointer-events: auto;
+  display: block;
+}
+
+.offerings-card--overlay {
+  overflow: hidden;
+}
+
+@media (max-width: 991px) {
+  .offerings-item {
+    flex: 0 0 calc(50% - 15px);
+  }
+  
+  .offerings-title {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .service-offerings-section {
+    padding: 60px 0;
+  }
+  
+  .offerings-item {
+    flex: 0 0 100%;
+  }
+  
+  .offerings-headline {
+    margin-bottom: 40px;
+  }
+  
+  .offerings-title {
+    font-size: 32px;
+  }
+  
+  .offerings-card {
+    padding: 30px 25px;
+  }
+}
+ 
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap');
+
+ .service-offerings-section {
+   width: 100%;
+   padding: 80px 0;
+   background: #f5f5f0;
+ }
+ 
+ .offerings-headline {
+   text-align: center;
+   margin-bottom: 60px;
+ }
+ 
+ .offerings-title {
+   font-family: 'Libre Baskerville', serif;
+   font-size: 42px;
+   font-weight: 400;
+   color: #23418B;
+   margin: 0;
+   letter-spacing: -1px;
+   text-transform: uppercase;
+ }
+ 
+
+ .offerings-list {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   column-gap: 20px;
+   /* background: #fff; */
+   /* row-gap: 40px; 
+   list-style: none;
+   margin: 0;
+   padding: 0 40px;
+ }
+ 
+ .offerings-item {
+   position: relative;
+ }
+ 
+ .text--center {
+   text-align: center;
+ }
+ 
+ .offerings-card {
+   position: relative;
+   padding: 30px 25px;
+   background: #fff;
+   border: 1px solid #e0e0e0;
+   height: 300px;
+   display: flex;
+   flex-direction: column;
+   transition: all 0.3s ease;
+   cursor: pointer;
+ }
+ 
+ .offerings-card:hover {
+   border-color: #168831;
+   box-shadow: 0 8px 24px rgba(22, 136, 49, 0.15);
+   transform: translateY(-5px);
+ }
+ 
+ .offerings-card__image {
+   margin-bottom: 25px;
+   display: flex;
+   justify-content: center;
+ }
+ 
+ .offerings-card__image img {
+   filter: brightness(0) saturate(100%) invert(42%) sepia(98%) saturate(1352%)
+     hue-rotate(95deg) brightness(0.95) contrast(0.9);
+ }
+ 
+ .offerings-card__title {
+   font-family: 'Libre Baskerville', serif;
+   font-size: 24px;
+   font-weight: 400;
+   margin-bottom: 20px;
+   color: #051c2c;
+ }
+ 
+ .offerings-text-wrap p {
+   font-family: 'Poppins', sans-serif;
+   font-size: 15px;
+   line-height: 1.7;
+   color: #666;
+   margin: 0;
+ }
+ 
+ .offerings-card__link {
+   position: absolute;
+   inset: 0;
+   z-index: 2;
+ }
+ 
+
+ @media (max-width: 991px) {
+   .offerings-list {
+     grid-template-columns: repeat(2, 1fr);
+   }
+ 
+   .offerings-title {
+     font-size: 36px;
+   }
+ }
+ 
+ @media (max-width: 768px) {
+   .offerings-list {
+     grid-template-columns: 1fr;
+   }
+ 
+   .offerings-title {
+     font-size: 32px;
+   }
+ 
+   .service-offerings-section {
+     padding: 60px 0;
+   }
+ }
+  */
+
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Libre+Baskerville:wght@400;700&display=swap");
+
+/* ===============================
+   FADE ANIMATION
+================================ */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.fade-in-up.animated {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===============================
+   SECTION
+================================ */
+.services-modern-section {
+  padding: 90px 0;
+  background: #f6f7f9;
+}
+
+.services-modern-title {
+  font-family: "Libre Baskerville", serif;
+  font-size: 42px;
+  text-align: center;
+  color: #23418b;
+  margin-bottom: 70px;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+
+/* ===============================
+   GRID
+================================ */
+.services-modern-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* ===============================
+   CARD
+================================ */
+.service-modern-card {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid #e4e7ec;
+  padding: 34px 32px;
+  display: flex;
+  gap: 22px;
+  align-items: flex-start;
+  transition: all 0.35s ease;
+  overflow: hidden;
+}
+
+.service-modern-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  border-color: #23418b;
+}
+
+/* ===============================
+   ICON
+================================ */
+.service-modern-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  background: #eef2fb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.service-modern-icon img {
+  width: 28px;
+  height: 28px;
+  filter: brightness(0) saturate(100%) invert(25%) sepia(22%)
+    saturate(1600%) hue-rotate(198deg) brightness(90%) contrast(95%);
+}
+
+/* ===============================
+   CONTENT
+================================ */
+.service-modern-content h4 {
+  font-family: "Libre Baskerville", serif;
+  font-size: 20px;
+  margin: 0 0 10px;
+  color: #051c2c;
+}
+
+.service-modern-content p {
+  font-family: "Poppins", sans-serif;
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: #5c6670;
+  margin: 0;
+}
+
+/* ===============================
+   ACCENT LINE
+================================ */
+.service-modern-line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4px;
+  height: 0;
+  background: linear-gradient(180deg, #23418b, #168831);
+  transition: height 0.35s ease;
+}
+
+.service-modern-card:hover .service-modern-line {
+  height: 100%;
+}
+
+/* ===============================
+   PRE-ACTIVE BORDER FOR 2nd & 5th CARD
+================================ */
+
+/* Show accent line by default */
+.services-modern-grid li:nth-child(2) .service-modern-line,
+.services-modern-grid li:nth-child(5) .service-modern-line {
+  height: 100%;
+}
+
+/* Optional: slightly stronger border to highlight */
+.services-modern-grid li:nth-child(2) .service-modern-card,
+.services-modern-grid li:nth-child(5) .service-modern-card {
+  border-color: #23418b;
+}
+
+/* Keep hover smooth (no jump) */
+.services-modern-grid li:nth-child(2) .service-modern-card:hover,
+.services-modern-grid li:nth-child(5) .service-modern-card:hover {
+  transform: translateY(-6px);
+}
+
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 991px) {
+  .services-modern-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .services-modern-title {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-modern-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-modern-title {
+    font-size: 32px;
+  }
+
+  .services-modern-section {
+    padding: 60px 0;
+  }
+}
