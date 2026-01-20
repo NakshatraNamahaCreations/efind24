@@ -105,7 +105,9 @@ function LegalPractices() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="legal-practices-section" style={{ '--bg-image': `url(${backgroundImage})` }}>
+    // <section ref={sectionRef} className="legal-practices-section" style={{ '--bg-image': `url(${backgroundImage})` }}>
+
+      <section ref={sectionRef} className="legal-practices-section">
       <div className="container">
         <div className="legal-practices-content">
           <h2 className="legal-practices-title fade-in-up">LEGAL PRACTICES</h2>

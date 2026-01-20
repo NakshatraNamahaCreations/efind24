@@ -3,6 +3,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import bannerImage from '../assets/icon/hero.jpg';
 import './TrademarkOpposition.css';
+import { FaBalanceScale } from 'react-icons/fa';
 
 function TrademarkOpposition() {
   const [selectedService, setSelectedService] = useState('Opposition');
@@ -116,6 +117,7 @@ function TrademarkOpposition() {
           <div className="manage-track-wrapper">
             {/* Left Panel - Information */}
             <div ref={infoPanelRef} className="info-panel fade-in-left">
+              <span className='manage-track-kicker'><FaBalanceScale/>TRADEMARK OPPOSITION</span>
               <h2 className="info-heading">
                 <span className="underline-blue">Manage</span> & <span className="underline-orange">Track</span> your Trademark Application. Consult our Trademark Experts.
               </h2>

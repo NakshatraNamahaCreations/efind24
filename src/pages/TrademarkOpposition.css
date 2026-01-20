@@ -1,5 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap');
 
+:root {
+  --primary: #23418B;
+  --secondary: #168831;
+  --accent: #22c55e;
+
+   --bg-main: #f8fafc;
+  --bg-soft: #f1f5f9;
+  --bg-card: #ffffff;
+
+  --bg-light: #f8fafc;
+
+
+  --text-dark: #0f172a;
+  --text-muted: #475569;
+
+  --border-soft: rgba(0, 0, 0, 0.08);
+
+  --shadow-soft: 0 20px 40px rgba(0, 0, 0, 0.08);
+  --shadow-strong: 0 30px 60px rgba(0, 0, 0, 0.15);
+}
+
 /* Scroll Animation Keyframes */
 @keyframes fadeInLeft {
   from {
@@ -221,10 +242,19 @@
 }
 
 /* Manage & Track Section */
-.manage-track-section {
+/* .manage-track-section {
   padding: 80px 0;
   background: #f5f5f0;
   min-height: 600px;
+} */
+
+.manage-track-section {
+  padding: 120px 0;
+  background:
+    radial-gradient(circle at top left, rgba(35,65,139,0.08), transparent 40%),
+    radial-gradient(circle at bottom right, rgba(22,136,49,0.08), transparent 40%),
+    var(--bg-light) !important;
+    margin-top: 40px;
 }
 
 .container {
@@ -233,11 +263,31 @@
   padding: 0 20px;
 }
 
-.manage-track-wrapper {
+/* .manage-track-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 60px;
   align-items: start;
+} */
+
+.manage-track-wrapper {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 30px !important;
+  align-items: center;
+}
+
+.manage-track-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 18px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, rgba(35,65,139,0.15), rgba(22,136,49,0.15));
+  color: var(--secondary);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
 }
 
 /* Left Panel - Information */
@@ -358,7 +408,7 @@
 }
 
 .form-title {
-  font-family: 'Libre Baskerville', serif;
+  font-family: 'poppins', sans-serif;
   font-size: 22px;
   font-weight: 400;
   color: #23418B;

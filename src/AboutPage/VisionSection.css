@@ -1,0 +1,175 @@
+/* ================================
+   VISION & MISSION – MODERN DESIGN
+================================ */
+
+.vm-section {
+  padding: 100px 20px;
+  background:
+    radial-gradient(1200px 400px at top left, #eef2ff 0%, transparent 60%),
+    linear-gradient(180deg, #f8fafc, #ffffff);
+}
+
+/* CONTAINER */
+.vm-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ================= HEADER ================= */
+
+.vm-header {
+  max-width: 600px;
+  margin-bottom: 70px;
+}
+
+.vm-kicker{
+      display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 6px 14px;
+  border-radius: 20px;
+
+  background: rgba(35, 65, 139, 0.12);
+  color: #168831;
+
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+
+}
+
+.vm-header h2 {
+  font-size: 42px;
+  font-weight: 800;
+  color: #23418b;
+  margin: 20px 0;
+  line-height: 1.2;
+}
+
+
+
+.vm-header p {
+  font-size: 17px;
+  line-height: 1.65;
+  color: #64748b;
+}
+
+/* ================= GRID ================= */
+
+.vm-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 48px;
+}
+
+/* ================= CARD ================= */
+
+.vm-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(8px);
+  border-radius: 26px;
+  padding: 56px 44px 44px;
+  box-shadow:
+    0 20px 40px rgba(15, 23, 42, 0.08),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.6);
+  overflow: visible;
+}
+
+/* VERTICAL ACCENT BAR */
+.vm-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 6px;
+  height: 100%;
+  background: linear-gradient(180deg, #168831, #23418b);
+  border-radius: 20px;
+}
+
+/* ================= ICON ================= */
+
+.vm-icon {
+  position: absolute;
+  top: -28px;
+  left: 40px;
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #23418b, #168831);
+  color: #ffffff;
+  display: grid;
+  place-items: center;
+  font-size: 22px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* ================= CONTENT ================= */
+
+.vm-card h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #0f172a;
+}
+
+.vm-card p {
+  font-size: 15.5px;
+  line-height: 1.75;
+  color: #475569;
+}
+
+/* ================= VARIANTS ================= */
+
+.vm-card.mission::before {
+  background: linear-gradient(180deg, #0f766e, #168831);
+}
+
+.vm-card.mission .vm-icon {
+  background: linear-gradient(135deg, #0f766e, #168831);
+}
+
+/* ================= HOVER EFFECT (SUBTLE) ================= */
+
+.vm-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.vm-card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 30px 60px rgba(15, 23, 42, 0.12),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.7);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+  .vm-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .vm-header h2 {
+    font-size: 36px;
+  }
+
+  .vm-icon {
+    left: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .vm-section {
+    padding: 80px 16px;
+  }
+
+  .vm-card {
+    padding: 48px 28px 36px;
+  }
+
+  .vm-header h2 {
+    font-size: 32px;
+  }
+}

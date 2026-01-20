@@ -1,0 +1,282 @@
+.why-section {
+  padding: 90px 20px;
+  background: linear-gradient(
+    135deg,
+    rgba(35, 65, 139, 0.08),
+    rgba(22, 136, 49, 0.08)
+  );
+  font-family: "poppins", sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+/* HEADER */
+/* .why-header {
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+}
+
+.why-badge {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 20px;
+  background: rgba(35, 65, 139, 0.15);
+  color: #23418b;
+  font-weight: 600;
+  font-size: 13px;
+  margin-bottom: 14px;
+}
+
+.why-header h2 {
+  font-size: 42px;
+  color: #23418b;
+  margin-bottom: 12px;
+  margin: 0;
+}
+
+.why-header p {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.7;
+} */
+
+/* SPLIT HEADER LAYOUT */
+.why-header.split {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 60px;
+  text-align: left;
+}
+.why-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 6px 14px;
+  border-radius: 20px;
+
+  background: rgba(35, 65, 139, 0.12);
+  color: #168831;
+
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+}
+
+/* LEFT */
+.why-header-left h2 {
+  font-size: 44px;
+  color: #23418b;
+  margin-top: 12px;
+}
+
+/* RIGHT */
+.why-header-right p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #444;
+  max-width: 520px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .why-header.split {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .why-header-right p {
+    max-width: 100%;
+  }
+}
+
+
+/* CURVE */
+/* .curve-svg {
+  max-width: 600px;
+  margin: 40px auto 20px;
+  display: block;
+} */
+
+/* CARDS */
+.why-cards {
+  max-width: 1200px;
+  margin: 20px auto 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 26px;
+  z-index: 3;
+  position: relative;
+}
+
+/* GLASS CARD */
+.why-card {
+  backdrop-filter: blur(14px);
+  background: rgba(255, 255, 255, 0.55);
+  border-radius: 22px;
+  padding: 32px 26px;
+  border: 1px solid rgba(35, 65, 139, 0.2);
+  box-shadow: 0 20px 50px rgba(35, 65, 139, 0.15);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 70px rgba(22, 136, 49, 0.25);
+}
+
+/* ICON */
+.card-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #23418b, #168831);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 24px;
+  margin-bottom: 18px;
+}
+
+/* TEXT */
+.why-card h3 {
+  font-size: 18px;
+  color: #23418b;
+  margin-bottom: 10px;
+}
+
+.why-card p {
+  font-size: 14.5px;
+  color: #444;
+  line-height: 1.7;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .why-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .why-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .why-header h2 {
+    font-size: 32px;
+  }
+}
+
+/* ======================================================
+   NETWORK / CLUSTER BACKGROUND
+====================================================== */
+
+.hh-network-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ---------- RINGS (VISIBLE) ---------- */
+.hh-network-bg .ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(4, 32, 58, 0.14);
+}
+
+/* Ring positions */
+.hh-network-bg .ring-1 {
+  width: 420px;
+  height: 420px;
+  right: -120px;
+  top: 80px;
+}
+
+.hh-network-bg .ring-2 {
+  width: 560px;
+  height: 560px;
+  right: -200px;
+  top: 20px;
+  opacity: 0.45;
+}
+
+.hh-network-bg .ring-3 {
+  width: 720px;
+  height: 720px;
+  right: -300px;
+  top: -40px;
+  opacity: 0.25;
+}
+
+/* ======================================================
+   ORBITS (ROTATING CONTAINERS)
+====================================================== */
+
+.orbit {
+  position: absolute;
+  border-radius: 50%;
+  animation: orbit 26s linear infinite;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.orbit-1 {
+  width: 420px;
+  height: 420px;
+  right: -120px;
+  top: 80px;
+  animation-duration: 25s;
+}
+
+.orbit-2 {
+  width: 560px;
+  height: 560px;
+  right: -200px;
+  top: 20px;
+  animation-duration: 26s;
+  animation-direction: reverse;
+}
+
+.orbit-3 {
+  width: 720px;
+  height: 720px;
+  right: -300px;
+  top: -40px;
+  animation-duration: 28s;
+}
+
+/* ======================================================
+   NODE (DOT MOVING ON RINGS)
+====================================================== */
+
+.orbit .node {
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 0 0 6px rgba(23, 88, 135, 0.25);
+}
+
+/* ======================================================
+   ANIMATION
+====================================================== */
+
+@keyframes orbit {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

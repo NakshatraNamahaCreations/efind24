@@ -1,0 +1,382 @@
+/* .experience-section {
+  padding: 90px 0 0px;
+  background: #ffffff;
+}
+
+.experience-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+} */
+
+/* HEADER */
+/* .experience-header {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 60px;
+  align-items: center;
+  margin-bottom: 70px;
+} */
+
+/* LEFT STACK */
+/* .experience-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+} */
+
+/* NUMBER */
+
+/* IMAGE MASK */
+/* .experience-number.image-mask {
+  background-image: url("../assets/cards/justice-scale.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #21438b48;
+  -webkit-background-clip: text;
+  background-clip: text;
+} */
+
+/* TEXT BELOW NUMBER */
+/* .experience-text {
+  margin-top: 12px;
+}
+
+.experience-text span {
+  font-size: 18px;
+  color: #555;
+  display: block;
+ font-family: 'Libre Baskerville', serif;;
+}
+
+.experience-text h2 {
+  font-size: 44px;
+  font-weight: 700;
+  margin: 0;
+  color: #000;
+  font-family: 'Libre Baskerville', serif;;
+}
+
+.fade-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  animation: fadeLeft 1s ease-out forwards;
+}
+
+@keyframes fadeLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+} */
+
+/* Optional delay if needed */
+/* .experience-left {
+  animation-delay: 0.2s;
+}
+
+.fade-right {
+  opacity: 0;
+  transform: translateX(40px);
+  animation: fadeRight 1s ease-out forwards;
+}
+
+@keyframes fadeRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(-40px);
+  animation: fadeup 1s ease-out forwards;
+}
+
+@keyframes fadeup {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+} */
+
+/* Optional delay if needed */
+/* .experience-left {
+  animation-delay: 0.2s;
+} */
+
+
+/* Optional delay if needed */
+/* .experience-left {
+  animation-delay: 0.2s;
+} */
+
+
+/* RIGHT DESCRIPTION */
+/* .experience-right {
+  max-width: 760px;
+}
+
+.experience-desc {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #666;
+  margin: 0;
+} */
+
+/* RESPONSIVE */
+/* @media (max-width: 991px) {
+  .experience-header {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .experience-left {
+    align-items: center;
+    text-align: center;
+  }
+
+  .experience-right {
+    text-align: center;
+  }
+} */
+
+
+/* FEATURES GRID */
+/* .experience-features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+  text-align: center;
+} */
+
+/* CARD */
+/* .experience-card {
+  padding: 10px 20px;
+} */
+
+/* ICON RING */
+/* .icon-ring {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  border: 12px solid #ceeace;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+  transition: all 0.35s ease;
+} */
+
+/* ICON INNER */
+/* .icon-inner {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: #21438b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.35s ease;
+}
+
+.icon-inner svg {
+  font-size: 30px;
+  color: #fff;
+  transition: all 0.35s ease;
+} */
+
+/* TITLE */
+/* .experience-card h4 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #000;
+} */
+
+/* LINE */
+/* .experience-card .line {
+  width: 36px;
+  height: 3px;
+  background: #168831;
+  display: block;
+  margin: 14px auto;
+} */
+
+/* TEXT */
+/* .experience-card p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #666;
+} */
+
+/* HOVER EFFECT */
+/* .experience-card:hover .icon-ring {
+  border-color: #ceeace;
+}
+
+.experience-card:hover .icon-inner {
+  background: #fff;
+}
+
+.experience-card:hover .icon-inner svg {
+  color: #21438b;
+}
+
+.experience-number-wrap {
+  position: relative;
+} */
+
+
+
+/* RESPONSIVE */
+/* @media (max-width: 991px) {
+  .experience-features {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .experience-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .experience-number {
+    font-size: 72px;
+  }
+
+  .experience-text h2 {
+    font-size: 34px;
+  }
+} */
+
+.experience-pills-section {
+  padding: 24px 0;
+  background: #ffffff;
+  border-top: 1px solid #f0f0f0;
+}
+
+.experience-pills-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+/* LEFT – EXPERIENCE */
+.experience-pill-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.experience-count {
+  font-size: 42px;
+  font-weight: 800;
+  color: #21438b;
+  line-height: 1;
+  font-family: 'Libre Baskerville', serif;
+}
+
+.experience-label span {
+  display: block;
+  font-size: 14px;
+  color: #666;
+}
+
+.experience-label strong {
+  font-size: 18px;
+  color: #000;
+  font-weight: 600;
+}
+
+/* RIGHT – PILLS */
+.experience-pill-right {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #21438b;
+  background: linear-gradient(
+    135deg,
+    rgba(22, 136, 49, 0.12),
+    rgba(35, 65, 139, 0.12)
+  );
+  border: 1px solid rgba(35, 65, 139, 0.15);
+  white-space: nowrap;
+  transition: all 0.25s ease;
+}
+
+/* ICON STYLE */
+.pill svg {
+  font-size: 16px;
+  color: #168831;
+  flex-shrink: 0;
+}
+
+/* HOVER EFFECT */
+.pill:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(22, 136, 49, 0.18),
+    rgba(35, 65, 139, 0.18)
+  );
+  transform: translateY(-2px);
+}
+/* ================= FADE RIGHT ANIMATION ================= */
+
+.fade-right {
+  opacity: 0;
+  transform: translateX(40px);
+  animation: fadeRight 0.8s ease forwards;
+}
+
+@keyframes fadeRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.experience-pill-right .pill:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.experience-pill-right .pill:nth-child(2) {
+  animation-delay: 0.25s;
+}
+
+.experience-pill-right .pill:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 991px) {
+  .experience-pills-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .experience-pill-left {
+    justify-content: center;
+  }
+
+  .experience-pill-right {
+    justify-content: center;
+  }
+}

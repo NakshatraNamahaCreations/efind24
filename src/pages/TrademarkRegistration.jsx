@@ -3,6 +3,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import bannerImage from '../assets/icon/banner2.jpg';
 import './TrademarkRegistration.css';
+import { FaBalanceScale } from 'react-icons/fa';
 
 function TrademarkRegistration() {
   const [selectedService, setSelectedService] = useState('Objection Response');
@@ -99,18 +100,20 @@ function TrademarkRegistration() {
   return (
     <div className="trademark-registration-page">
       <Header />
-      <section className="breadcrumb_section" style={{ backgroundImage: `url(${bannerImage})` }}>
+      {/* <section className="breadcrumb_section" style={{ backgroundImage: `url(${bannerImage})` }}>
         <h2 className="breadcrumb_title">Trademark Registration</h2>
         <div className="breadcrumb_watermark">Trademark <br /> Registration</div>
-      </section>
+      </section> */}
+
       
       <section className="manage-track-section">
         <div className="container">
           <div className="manage-track-wrapper">
             {/* Left Panel - Information */}
             <div ref={infoPanelRef} className="info-panel fade-in-left">
+              <span className='manage-track-kicker'><FaBalanceScale size={18}/> TRADEMARK REGISTRATION</span>
               <h2 className="info-heading">
-                <span className="underline-blue">Register</span> & <span className="underline-orange">Protect</span> your Brand. Get Your Trademark Registered Today.
+                Register & Protect your Brand. Get Your Trademark Registered Today.
               </h2>
               <p className="info-description">
                 A trademark is a unique symbol or word(s) used to represent a business or its products. Once registered, that same symbol or series of words cannot be used by any other organization, forever, as long as it remains in use and proper paperwork and fees are filed.

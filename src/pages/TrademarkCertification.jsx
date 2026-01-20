@@ -3,6 +3,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import bannerImage from '../assets/images/close-up-law-hammer.jpg';
 import './TrademarkCertification.css';
+import { FaBalanceScale } from 'react-icons/fa';
 
 function TrademarkCertification() {
   const [selectedService, setSelectedService] = useState('Certificate');
@@ -103,18 +104,19 @@ function TrademarkCertification() {
   return (
     <div className="trademark-certification-page">
       <Header />
-      <section className="breadcrumb_section" style={{ backgroundImage: `url(${bannerImage})` }}>
+      {/* <section className="breadcrumb_section" style={{ backgroundImage: `url(${bannerImage})` }}>
         <h2 className="breadcrumb_title">Trademark Certification</h2>
         <div className="breadcrumb_watermark">Trademark <br /> Certification</div>
-      </section>
+      </section> */}
       
       <section className="manage-track-section">
         <div className="container">
           <div className="manage-track-wrapper">
             {/* Left Panel - Information */}
             <div ref={infoPanelRef} className="info-panel fade-in-left">
+              <span className='manage-track-kicker'><FaBalanceScale/> TRADEMARK CERTIFICATE</span>
               <h2 className="info-heading">
-                <span className="underline-blue">Manage</span> & <span className="underline-orange">Track</span> your Trademark Application. Consult our Trademark Experts.
+                Manage & Track your Trademark Application. Consult our Trademark Experts.
               </h2>
               <p className="info-description">
                 AI-powered search and government-backed filings, handled end-to-end by India's most trusted compliance platform. Tailored for MSMEs, Corporates, and Global Founders.

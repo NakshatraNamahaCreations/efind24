@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import historyBg from '../assets/cards/history-bg.png';
 import './TestimonialsNews.css';
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 function TestimonialsNews() {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
@@ -85,82 +86,63 @@ function TestimonialsNews() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="testimonials-news-section">
-      <div className="testimonials-bg">
-        <img src={historyBg} alt="Background" />
-      </div>
-      <div className="section-overlay"></div>
-      <div className="container">
-        <div className="testimonials-news-content">
-          <div className="testimonials-column fade-in-left">
-            <div className="testimonials-header">
-              <h3 className="testimonials-title">Testimonial</h3>
-              <div className="testimonials-nav">
-                <i className="testimonials-nav-prev" onClick={prevTestimonial}>‹</i>
-                <i className="testimonials-nav-next" onClick={nextTestimonial}>›</i>
-              </div>
-            </div>
-            <div className="testimonials-divider"></div>
-            <div className="testimonials-carousel">
-              <div className="testimonials-viewport">
-                <div 
-                  className="testimonials-slides"
-                  style={{ transform: `translateX(-${currentTestimonial * 100}%)` }}
-                >
-                  {testimonials.map((testimonial, index) => (
-                    <div key={index} className="testimonial-item">
-                      <div className="testimonial-item-outer">
-                        <div className="testimonial-item-inner">
-                          <div className="testimonial-content">
-                            <p>
-                              <span className="testimonial-quote">{testimonial.quote}</span><br />
-                              {testimonial.text}
-                            </p>
-                          </div>
-                        </div>
-                        <div className="testimonial-info">
-                          <span className="testimonial-author">{testimonial.author}</span>
-                          <span className="testimonial-position">{testimonial.position}</span>
-                        </div>
-                        <div className="testimonial-gimmick"></div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
+  <section ref={sectionRef} className="tn-v2">
+  <div className="container">
+    <div className="tn-v2-grid">
 
-          <div className="news-column fade-in-right">
-            <div className="news-header">
-              <h3 className="news-title">Recent News</h3>
-            </div>
-            <div className="news-list">
-              {newsPosts.map((post, index) => (
-                <article key={index} className="news-item">
-                  <div className="blog-date-wrapper">
-                    <span className="blog-date-day">{post.day}</span>
-                    <span className="blog-date-month">{post.month}</span>
-                  </div>
-                  <div className="news-content">
-                    <header className="post-header">
-                      <div className="news-title-link">
-                        <a href={post.link}>{post.title}</a>
-                      </div>
-                      <div className="news-excerpt">
-                        {post.excerpt}
-                        <div className="clear"></div>
-                        <a href={post.link} className="excerpt-read-more">Read More</a>
-                      </div>
-                    </header>
-                  </div>
-                </article>
-              ))}
-            </div>
+      {/* TESTIMONIAL FEATURE */}
+      <div className="tn-v2-testimonial fade-in-left">
+        <span className="tn-eyebrow">Client Voices</span>
+        <h3>What Our Clients Say</h3>
+
+        <div className="tn-v2-quote-box">
+          <p className="tn-v2-quote">
+            “{testimonials[currentTestimonial].quote}”
+          </p>
+          <p className="tn-v2-text">
+            {testimonials[currentTestimonial].text}
+          </p>
+
+          <div className="tn-v2-author">
+            <strong>{testimonials[currentTestimonial].author}</strong>
+            <span>{testimonials[currentTestimonial].position}</span>
           </div>
         </div>
+
+        <div className="tn-v2-controls">
+          <button onClick={prevTestimonial}><FaChevronLeft style={{marginTop:"4px"}}/></button>
+          <button onClick={nextTestimonial}><FaChevronRight style={{marginTop:"4px"}}/></button>
+        </div>
       </div>
-    </section>
+
+      {/* NEWS TIMELINE */}
+      <div className="tn-v2-news fade-in-right">
+        <span className="tn-eyebrow">Insights</span>
+        <h3>Legal Updates & News</h3>
+
+        <div className="tn-v2-timeline">
+          {newsPosts.map((post, index) => (
+            <div key={index} className="tn-v2-item">
+              <div className="tn-v2-date">
+                <span>{post.day}</span>
+                <small>{post.month}</small>
+              </div>
+
+              <div className="tn-v2-content">
+                <h4>{post.title}</h4>
+                <p>{post.excerpt}</p>
+                <a href={post.link}>Read article →</a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
   );
 }
 

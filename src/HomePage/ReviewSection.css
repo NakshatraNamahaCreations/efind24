@@ -1,0 +1,207 @@
+.tn-section {
+  padding: 100px 0;
+  background: linear-gradient(180deg, #f7f9fc, #ffffff);
+}
+
+.tn-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 80px;
+  align-items: stretch;
+}
+
+/* COMMON */
+.tn-label {
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #1f3c4b;
+  font-weight: 600;
+ 
+}
+
+.tn-heading {
+  font-size: 38px;
+  margin: 12px 0 32px;
+  color: #23418b;
+  font-family: 'Libre Baskerville', serif;
+}
+
+/* =========================
+   TESTIMONIAL SLIDER
+========================= */
+.testimonial-slider {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.testimonial-track {
+  display: flex;
+  transition: transform 0.6s ease;
+}
+
+.testimonial-slide {
+  min-width: 100%;
+  padding: 10px;
+}
+
+/* CARD */
+.testimonial-card {
+  background: #ffffff;
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: 0 14px 40px rgba(15, 23, 42, 0.08);
+}
+
+/* TEXT */
+.testimonial-quote {
+  font-size: 20px;
+  font-weight: 600;
+  color: #168831;
+}
+
+.testimonial-desc {
+  margin: 14px 0 18px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #475569;
+}
+
+.testimonial-author strong {
+  display: block;
+  font-size: 15px;
+  color: #175885;
+}
+
+.testimonial-author span {
+  font-size: 13px;
+  color: #64748b;
+}
+
+/* DOTS */
+.testimonial-dots {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-start;
+  margin-top: 24px;
+  margin-left: 8px;
+}
+
+.testimonial-dots button {
+  width: 4px;
+  height: 5px;
+  border-radius: 10px;
+  background: #cfd6dc;
+  cursor: pointer;
+  transition: all 0.35s ease;
+}
+
+.testimonial-dots button.active {
+  height: 5px;
+  background: linear-gradient(180deg, #175885, #6aa8ff);
+}
+
+
+
+/* ================= NEWS ================= */
+/* ================= NEWS ================= */
+.tn-news {
+  padding: 48px 0;
+}
+
+.news-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 28px;
+}
+
+.news-item {
+  display: flex;
+  gap: 22px;
+  padding: 20px 0;
+  border-bottom: 1px solid #e6e6e6;
+  align-items: center;
+}
+
+/* DATE BADGE */
+.news-date-badge {
+  min-width: 64px;
+  padding: 8px 6px;
+  background: #ffffff;
+  border-left: 4px solid #168831;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 1.1;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.news-date-badge .day {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1f3c4b;
+}
+
+.news-date-badge .month {
+  font-size: 13px;
+  font-weight: 600;
+  color: #333;
+  text-transform: uppercase;
+}
+
+.news-date-badge .year {
+  font-size: 11px;
+  color: #888;
+}
+
+
+
+/* CONTENT */
+.news-content h4 {
+  font-size: 18px;
+  margin: 0;
+  color: #111;
+  transition: color 0.3s ease;
+}
+
+.news-item:hover .news-content h4 {
+  color: #1f3c4b;
+}
+
+/* LINK */
+.news-link {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1f3c4b;
+  text-decoration: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 991px) {
+  .news-item {
+    align-items: flex-start;
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 991px) {
+  .tn-container {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .tn-testimonials,
+  .tn-news {
+    padding: 36px;
+  }
+
+  .tn-heading {
+    font-size: 32px;
+  }
+}

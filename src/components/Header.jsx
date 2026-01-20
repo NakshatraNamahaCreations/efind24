@@ -189,16 +189,23 @@
 
 
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa6";
+import { FaPhoneAlt } from "react-icons/fa";
+import { FaEnvelope } from "react-icons/fa";
+
 
 export default function Header() {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [openMenu, setOpenMenu] = useState(null);      // about | ip
+  const [openSubMenu, setOpenSubMenu] = useState(null); // trademark
   const closeTimer = useRef(null);
+  const [showLogin, setShowLogin] = useState(false);
+  const [authMode, setAuthMode] = useState("login"); // login | register
 
-  const servicesList = [
+
+  const trademarkServices = [
     "Trademark Registration",
     "Trademark Objection",
     "Trademark Certificate",
@@ -207,9 +214,12 @@ export default function Header() {
     "Trademark Rectification",
     "Trademark Renewal",
     "Expedited TM Registration",
-    "Copyright Registration",
-    "Copyright Objection",
   ];
+
+  const copyrightServices = [
+    "Copyright Registration",
+    "Copyright Objection"
+  ]
 
   const getServiceRoute = (name) => {
     const map = {
@@ -222,94 +232,309 @@ export default function Header() {
       "Trademark Renewal": "/trademark-renewal",
       "Expedited TM Registration": "/expedited-trademark-registration",
       "Copyright Registration": "/copyright-registration",
-      "Copyright Objection": "/copyright-objection",
+      "Copyright Objection": "/copyright-objection"
     };
     return map[name] || "/";
+
+    // const map = {
+    //   "Trademark Registration": "#",
+    //   "Trademark Objection": "#",
+    //   "Trademark Certificate": "#",
+    //   "Trademark Opposition": "#",
+    //   "Trademark Hearing": "#",
+    //   "Trademark Rectification": "#",
+    //   "Trademark Renewal": "#",
+    //   "Expedited TM Registration": "#",
+    //   "Copyright Registration": "#",
+    //   "Copyright Objection": "#"
+    // };
+    // return map[name] || "/";
   };
 
-  const onEnter = () => {
+  const openMenuSafe = (menu) => {
     clearTimeout(closeTimer.current);
-    setIsDropdownOpen(true);
+    setOpenMenu(menu);
   };
 
-  const onLeave = () => {
+  const openSubMenuSafe = (submenu) => {
+    clearTimeout(closeTimer.current);
+    setOpenSubMenu(submenu);
+  };
+
+  const closeAll = () => {
     closeTimer.current = setTimeout(() => {
-      setIsDropdownOpen(false);
-    }, 180);
+      setOpenMenu(null);
+      setOpenSubMenu(null);
+    }, 250);
   };
 
   useEffect(() => {
     return () => clearTimeout(closeTimer.current);
   }, []);
 
+  useEffect(() => {
+  const onScroll = () => {
+    const nav = document.querySelector('.nav-wrapper');
+    if (window.scrollY > 40) {
+      nav.classList.add('at-top');
+    } else {
+      nav.classList.remove('at-top');
+    }
+  };
+
+  window.addEventListener('scroll', onScroll);
+  return () => window.removeEventListener('scroll', onScroll);
+}, []);
+
+
   return (
     <header className="header-modern">
+
       {/* TOP BAR */}
       <div className="top-bar">
-        <div className="container top-bar-inner">
-          <span>
-           19/1, F5, First floor, KCD complex, CSI compound, 3rd Cross, Mission road, Bangalore - 560 027
-          </span>
-          <div className="top-social">
-            <a href="#"><FaTwitter/></a>
-            <a href="#"><FaFacebook/></a>
-            <a href="#"><FaLinkedin/></a>
-            <a href="#"><FaInstagram/></a>
-          </div>
-        </div>
+        <div className="top-bar">
+  <div className="container top-bar-inner">
+    
+    {/* LEFT SIDE */}
+    <div className="top-left">
+      <span>
+        <FaPhoneAlt /> +91 7204063525
+      </span>
+      <span>
+        <FaEnvelope /> manuvenkatareddyv123@gmail.com
+      </span>
+    </div>
+
+    {/* RIGHT SIDE */}
+    <div className="top-social">
+      <FaTwitter />
+      <FaFacebook />
+      <FaLinkedin />
+      <FaInstagram />
+    </div>
+
+  </div>
+</div>
+
       </div>
 
-      {/* MAIN NAV */}
+      {/* NAVBAR */}
+      <div className="nav-wrapper">
       <div className="nav-glass">
         <div className="container nav-inner">
+
           {/* LOGO */}
           <Link to="/" className="logo">
             <span className="logo-icon">⚖</span>
             <span className="logo-text">efind24</span>
           </Link>
 
-          {/* MENU */}
           <nav>
             <ul className="menu">
               <li><Link to="/">Home</Link></li>
-              <li><Link to="/about">About Us</Link></li>
 
+              {/* ABOUT */}
               <li
                 className="dropdown"
-                onMouseEnter={onEnter}
-                onMouseLeave={onLeave}
+                onMouseEnter={() => openMenuSafe("about")}
+                onMouseLeave={closeAll}
               >
-                <span className="dropdown-trigger">
-                  Trademark
-                  <span className={`arrow ${isDropdownOpen ? "open" : ""}`}>▾</span>
-                </span>
+                <Link to="/about" className="dropdown-trigger">
+                  About Us <span className="arrow">▾</span>
+                </Link>
 
-                {isDropdownOpen && (
+                {openMenu === "about" && (
                   <ul className="dropdown-menu">
-                    {servicesList.map((item, i) => (
-                      <li key={i}>
-                        <Link
-                          to={getServiceRoute(item)}
-                          onClick={() => setIsDropdownOpen(false)}
-                        >
-                          {item}
-                        </Link>
-                      </li>
-                    ))}
+                    <li><Link to="/privacy-policy">Privacy Policy</Link></li>
+                    <li><Link to="/contact">Contact Us</Link></li>
+                     {/* <li><Link to="#">Contact Us</Link></li> */}
                   </ul>
                 )}
               </li>
 
-              <li><Link to="/case-studies">Case Studies</Link></li>
-              <li>
-                <Link to="/contact" className="cta">
-                  Contact
-                </Link>
+              {/* INTELLECTUAL PROPERTY */}
+              <li
+                className="dropdown"
+                onMouseEnter={() => openMenuSafe("ip")}
+                onMouseLeave={closeAll}
+              >
+                <span className="dropdown-trigger">
+                  Intellectual Property <span className="arrow">▾</span>
+                </span>
+
+                {openMenu === "ip" && (
+                  <ul className="dropdown-menu">
+
+                    {/* TRADEMARK */}
+                    <li
+                      className="sub-dropdown"
+                      onMouseEnter={() => openSubMenuSafe("trademark")}
+                    >
+                     
+                      <Link to="#" className="dropdown-trigger">
+                        Trademark <span className="arrow">▸</span>
+                      </Link>
+                    
+
+                      {openSubMenu === "trademark" && (
+                        <ul
+                          className="dropdown-menu right"
+                          onMouseEnter={() => openSubMenuSafe("trademark")}
+                        >
+                          {trademarkServices.map((item, i) => (
+                            <li key={i}>
+                              <Link
+                                to={getServiceRoute(item)}
+                                onClick={() => {
+                                  setOpenMenu(null);
+                                  setOpenSubMenu(null);
+                                }}
+                              >
+                                {item}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </li>
+
+                    {/* COPYRIGHT */}
+                    <li
+                    className="sub-dropdown"
+                      onMouseEnter={() => openSubMenuSafe("copyright")}>
+                      <Link
+                        to="#"
+                       className="dropdown-trigger"
+                      >
+                        Copyright <span className="arrow">▸</span>
+                      </Link>
+
+                       {openSubMenu === "copyright" && (
+                        <ul
+                          className="dropdown-menu right"
+                          onMouseEnter={() => openSubMenuSafe("copyright")}
+                        >
+                          {copyrightServices.map((item, i) => (
+                            <li key={i}>
+                              <Link
+                                to={getServiceRoute(item)}
+                                onClick={() => {
+                                  setOpenMenu(null);
+                                  setOpenSubMenu(null);
+                                }}
+                              >
+                                {item}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </li>
+
+                  </ul>
+                )}
               </li>
+
+              <li>
+ <button
+  className="cta"
+  onClick={() => {
+    setAuthMode("login");
+    setShowLogin(true);
+  }}
+>
+  Login
+</button>
+
+
+</li>
+
             </ul>
           </nav>
+
         </div>
       </div>
+      </div>
+
+    {showLogin && (
+  <div className="login-overlay" onClick={() => setShowLogin(false)}>
+    <div
+      className="login-modal"
+      onClick={(e) => e.stopPropagation()}
+    >
+      <button
+        className="close-btn"
+        onClick={() => setShowLogin(false)}
+      >
+        ✕
+      </button>
+
+      {/* TITLE */}
+      <h2>
+        {authMode === "login" ? "Welcome Back" : "Create Account"}
+      </h2>
+      <p>
+        {authMode === "login"
+          ? "Login to access"
+          : "Register to get started with efind24"}
+      </p>
+
+      {/* FORM */}
+      <form>
+        {authMode === "register" && (
+          <>
+            <input type="text" placeholder="Full Name" required />
+            <input type="tel" placeholder="Mobile Number" required />
+          </>
+        )}
+
+        <input type="email" placeholder="Email address" required />
+        <input type="password" placeholder="Password" required />
+
+        {authMode === "register" && (
+          <input
+            type="password"
+            placeholder="Confirm Password"
+            required
+          />
+        )}
+
+        <button type="submit" className="login-submit">
+          {authMode === "login" ? "Login" : "Register"}
+        </button>
+      </form>
+
+      {/* FOOTER SWITCH */}
+      <span className="login-footer">
+        {authMode === "login" ? (
+          <>
+            Don’t have an account?{" "}
+            <button
+              type="button"
+              className="link-btn"
+              onClick={() => setAuthMode("register")}
+            >
+              Register
+            </button>
+          </>
+        ) : (
+          <>
+            Already have an account?{" "}
+            <button
+              type="button"
+              className="link-btn"
+              onClick={() => setAuthMode("login")}
+            >
+              Login
+            </button>
+          </>
+        )}
+      </span>
+    </div>
+  </div>
+)}
+
+
     </header>
   );
 }

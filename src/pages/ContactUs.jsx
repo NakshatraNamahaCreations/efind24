@@ -3,6 +3,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import bannerImage from '../assets/images/close-up-law-hammer.jpg';
 import './ContactUs.css';
+import ContactBan from './ContactBan';
 
 function ContactUs() {
   const [formData, setFormData] = useState({
@@ -69,19 +70,19 @@ function ContactUs() {
   };
 
   return (
+    <>
     <div className="contact-us-page">
       <Header />
-      <section className="breadcrumb_section" style={{ backgroundImage: `url(${bannerImage})` }}>
-        <h2 className="breadcrumb_title">Contact Us</h2>
-        <div className="breadcrumb_watermark">Contact Us</div>
-      </section>
+      <ContactBan/>
+     
+
 
       {/* Contact Information Section */}
       <section className="contact-info-section">
         <div className="container">
           <div ref={contactInfoRef} className="contact-info-wrapper fade-in-up">
             <h2 className="info-heading">
-              <span className="underline-blue">Get</span> In <span className="underline-orange">Touch</span>
+             Get in Touch
             </h2>
             <p className="info-description">We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
             
@@ -236,6 +237,7 @@ function ContactUs() {
 
       <Footer />
     </div>
+    </>
   );
 }
 

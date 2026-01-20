@@ -14,13 +14,20 @@ import ExpeditedTrademarkRegistration from './pages/ExpeditedTrademarkRegistrati
 import ContactUs from './pages/ContactUs'
 import CaseStudies from './pages/CaseStudies'
 import './App.css'
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+
+import BackToTop from './components/BackToTop'
+import About from './AboutPage/About'
 
 function App() {
   return (
     <Router>
+      <BackToTop/>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<AboutUs />} />
+        <Route path="/about" element={<About/>} />
         <Route path="/trademark-objection" element={<TrademarkObjection />} />
         <Route path="/trademark-registration" element={<TrademarkRegistration />} />
         <Route path="/trademark-certification" element={<TrademarkCertification />} />

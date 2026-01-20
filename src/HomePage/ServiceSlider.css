@@ -1,0 +1,146 @@
+/* SECTION */
+.solutions-section {
+  background-image: url('../assets/images/efind-2.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 80px 0;
+  position: relative;
+}
+
+.solutions-section::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.65);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* CONTAINER */
+.solutions-container {
+  max-width: 1400px;
+  margin: auto;
+  padding: 0 40px;
+  display: flex;
+  align-items: stretch;
+  gap: 60px;
+}
+
+/* LEFT SLIDER */
+.solutions-slider {
+  flex: 1.2;
+  min-height: 360px;
+  min-width: 0; /* 🚨 CRITICAL FIX */
+}
+
+/* SLICK FIXES */
+.slick-list {
+  overflow: hidden;
+  
+}
+
+.slick-track {
+  display: flex !important;
+}
+
+.slick-slide {
+  height: auto;
+}
+
+.slick-slide > div {
+  height: 100%;
+}
+
+/* CARD */
+.solution-card {
+  border: 3px solid #ffffffcc;
+  background: rgba(0, 0, 0, 0.65);
+  color: #ffffff;
+  padding: 10px 30px;
+  min-height: 300px;
+  text-align: center;
+  margin: 0 12px;
+}
+
+.solution-card h3 {
+  font-size: 22px;
+  margin-bottom: 16px;
+}
+
+.solution-card p {
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.details-link {
+  font-size: 14px;
+  color: #ffffff;
+  text-decoration: none;
+  border-bottom: 1px solid #e2e2e2;
+  padding-bottom: 4px;
+}
+
+.details-link:hover{
+    color: #e2e2e2;
+}
+
+/* RIGHT CONTENT */
+.solutions-content {
+  flex: 0.8;
+  color: #ffffff;
+  z-index: 3;
+}
+
+.solutions-label {
+  color: #fff;
+  font-size: 18px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.solutions-content h2 {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  margin: 0;
+  font-family: 'Libre Baskerville', serif;
+  color: #fefefe;
+}
+
+.solutions-content p {
+  font-size: 15px;
+  line-height: 1.8;
+  max-width: 420px;
+}
+
+/* ARROWS */
+.slick-prev,
+.slick-next {
+  width: 40px;
+  height: 40px;
+  z-index: 5;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-size: 40px;
+  color: #f4b400;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .solutions-container {
+    flex-direction: column;
+  }
+
+  .solutions-content {
+    text-align: center;
+  }
+
+  .solutions-content p {
+    margin: auto;
+  }
+}

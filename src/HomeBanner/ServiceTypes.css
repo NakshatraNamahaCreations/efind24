@@ -1,0 +1,237 @@
+/* ===============================
+   SERVICES SECTION
+================================ */
+.services-section {
+  padding: 60px 20px;
+  background: #ffffff;
+}
+
+/* ===============================
+   CONTAINER
+================================ */
+.services-container {
+  max-width: 1300px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 0.6fr 1fr;
+  gap: 80px;
+  align-items: flex-start;
+}
+
+/* ===============================
+   LEFT SIDE
+================================ */
+.services-left {
+  position: sticky;
+  top: 110px;
+}
+
+.services-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 6px 14px;
+  border-radius: 20px;
+
+  background: rgba(35, 65, 139, 0.12);
+  color: #168831;
+
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  margin-bottom: 20px;
+}
+
+
+.services-heading {
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 1.15;
+  color: #23418b;
+  margin: 0 0 32px;
+}
+
+/* ===============================
+   IMAGE
+================================ */
+.image-wrapper {
+  position: relative;
+  border-radius: 28px;
+  overflow: hidden;
+}
+
+.image-wrapper img {
+  width: 100%;
+  display: block;
+  border-radius: 28px;
+}
+
+/* ===============================
+   RIGHT SIDE
+================================ */
+.services-right {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===============================
+   ACCORDION ITEM (CARD)
+================================ */
+.service-item {
+  position: relative;
+  padding: 26px 24px;
+  margin-bottom: 18px;
+  border-radius: 20px;
+  cursor: pointer;
+
+  background: rgba(255, 255, 255, 0.68);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border: 1px solid rgba(35, 65, 139, 0.08);
+  transition: all 0.35s ease;
+}
+
+/* Hover elevation */
+.service-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 40px rgba(35, 65, 139, 0.12);
+}
+
+/* ===============================
+   ACTIVE CARD
+================================ */
+.service-item.active {
+  background: linear-gradient(
+    135deg,
+    rgba(35, 65, 139, 0.08),
+    rgba(22, 136, 49, 0.06)
+  );
+
+  border-color: rgba(35, 65, 139, 0.25);
+
+  box-shadow:
+    0 25px 60px rgba(35, 65, 139, 0.18),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.6);
+}
+
+/* Subtle glow aura */
+.service-item.active::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  background: radial-gradient(
+    circle at top right,
+    rgba(35, 65, 139, 0.18),
+    transparent 60%
+  );
+  z-index: -1;
+}
+
+/* ===============================
+   LEFT ACCENT BAR
+================================ */
+.service-item::before {
+  content: "";
+  position: absolute;
+  left: -1px;
+  top: 22px;
+  width: 4px;
+  height: 0;
+  border-radius: 6px;
+  background: linear-gradient(180deg, #168831, #23418b);
+  transition: height 0.4s ease;
+}
+
+.service-item.active::before {
+  height: calc(100% - 44px);
+}
+
+/* ===============================
+   TITLE
+================================ */
+.service-item h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111111;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.service-item.active h3 {
+  color: #23418b;
+}
+
+/* ===============================
+   ACCORDION CONTENT
+================================ */
+.service-content {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transform: translateY(6px);
+  transition: all 0.4s ease;
+}
+
+.service-item.active .service-content {
+  max-height: 180px;
+  opacity: 1;
+  transform: translateY(0);
+  margin-top: 10px;
+}
+
+/* ===============================
+   TEXT & LINK
+================================ */
+.service-content p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.service-content a {
+  font-size: 14px;
+  font-weight: 600;
+  color: #23418b;
+  text-decoration: none;
+}
+
+.service-content a:hover {
+  text-decoration: underline;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 992px) {
+  .services-container {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .services-left {
+    position: relative;
+    top: auto;
+  }
+
+  .services-heading {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 576px) {
+  .services-heading {
+    font-size: 30px;
+  }
+
+  .service-item {
+    padding: 22px 20px;
+  }
+
+  .service-item h3 {
+    font-size: 20px;
+  }
+}

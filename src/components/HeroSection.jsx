@@ -91,112 +91,165 @@
 
 // export default HeroSection;
 
-import { useState, useEffect } from "react";
-import "./HeroSection.css";
-import justicescale from "../assets/cards/justice-scale.png"
+// import { useState, useEffect } from "react";
+// import "./HeroSection.css";
+// import justicescale from "../assets/cards/justice-scale.png"
 
-function HeroSection() {
-  const [currentSlide, setCurrentSlide] = useState(0);
+// function HeroSection() {
+//   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const slides = [
-    {
-      title: "Driven by Success,",
-      subtitle: "Defined by Results.",
-      description:
-        "Strategic trademark and intellectual property solutions built on experience, precision, and trust."
-    },
-    {
-      title: "Law Firm Devoted To",
-      subtitle: "Our Clients",
-      description:
-        "We deliver reliable legal support with a business-focused approach, ensuring long-term protection and compliance."
-    },
-    {
-      title: "We Stand With You",
-      subtitle: "At Every Step",
-      description:
-        "From registration to enforcement, our legal experts guide you with clarity, confidence, and accountability."
-    }
-  ];
+//   const slides = [
+//     {
+//       title: "Driven by Success,",
+//       subtitle: "Defined by Results.",
+//       description:
+//         "Strategic trademark and intellectual property solutions built on experience, precision, and trust."
+//     },
+//     {
+//       title: "Law Firm Devoted To",
+//       subtitle: "Our Clients",
+//       description:
+//         "We deliver reliable legal support with a business-focused approach, ensuring long-term protection and compliance."
+//     },
+//     {
+//       title: "We Stand With You",
+//       subtitle: "At Every Step",
+//       description:
+//         "From registration to enforcement, our legal experts guide you with clarity, confidence, and accountability."
+//     }
+//   ];
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [slides.length]);
+//   useEffect(() => {
+//     const interval = setInterval(() => {
+//       setCurrentSlide((prev) => (prev + 1) % slides.length);
+//     }, 5000);
+//     return () => clearInterval(interval);
+//   }, [slides.length]);
 
-  return (
-    <section className="hero-modern-slider">
-      <div className="hero-slider">
-        {slides.map((slide, index) => (
-          <div
-            key={index}
-            className={`hero-slide ${index === currentSlide ? "active" : ""}`}
-          >
-            <div className="hero-slide-inner">
+//   return (
+//     <section className="hero-modern-slider">
+//       <div className="hero-slider">
+//         {slides.map((slide, index) => (
+//           <div
+//             key={index}
+//             className={`hero-slide ${index === currentSlide ? "active" : ""}`}
+//           >
+//             <div className="hero-slide-inner">
               {/* LEFT CONTENT */}
-              <div className="slide-container">
-                <div className="hero-content">
-                  <span className="hero-tag">Legal & Trademark Experts</span>
+              // <div className="slide-container">
+              //   <div className="hero-content">
+              //     <span className="hero-tag">Legal & Trademark Experts</span>
 
-                  <h1 className="hero-title">
-                    {slide.title} <br /> {slide.subtitle}
-                  </h1>
+              //     <h1 className="hero-title">
+              //       {slide.title} <br /> {slide.subtitle}
+              //     </h1>
 
-                  <p className="hero-description">{slide.description}</p>
+              //     <p className="hero-description">{slide.description}</p>
 
-                  <div className="hero-actions">
-                    <a href="/contact" className="btn-primary">
-                      Get Consultation
-                    </a>
-                    <a href="/about" className="btn-outline">
-                      Learn More
-                    </a>
-                  </div>
-                </div>
-              </div>
+              //     <div className="hero-actions">
+              //       <a href="/contact" className="btn-primary">
+              //         Get Consultation
+              //       </a>
+              //       <a href="/about" className="btn-outline">
+              //         Learn More
+              //       </a>
+              //     </div>
+              //   </div>
+              // </div>
 
               {/* RIGHT FLOATING IMAGE */}
-              <div className="hero-floating-image">
+              {/* <div className="hero-floating-image">
                 <img
                   src= {justicescale}
                   alt="Justice Balance Scale"
                 />
+              </div> */}
+        //     </div>
+        //   </div>
+        // ))}
+
+        {/* PAGINATION */}
+        // <div className="hero-pagination">
+        //   {slides.map((_, index) => (
+        //     <span
+        //       key={index}
+        //       className={`hero-dot ${
+        //         index === currentSlide ? "active" : ""
+        //       }`}
+        //       onClick={() => setCurrentSlide(index)}
+        //     />
+        //   ))}
+        // </div>
+
+        {/* NEXT ARROW */}
+//         <div
+//           className="hero-arrow"
+//           onClick={() =>
+//             setCurrentSlide((prev) => (prev + 1) % slides.length)
+//           }
+//         >
+//           <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+//             <path
+//               d="M9 18L15 12L9 6"
+//               stroke="currentColor"
+//               strokeWidth="2"
+//               strokeLinecap="round"
+//               strokeLinejoin="round"
+//             />
+//           </svg>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }
+
+// export default HeroSection;
+
+
+
+import "./HeroSection.css";
+
+function HeroSection() {
+  const slidingTexts = [
+    "Clear Guidance",
+    "Accurate Documentation",
+    "Complete Compliance"
+  ];
+
+  return (
+    <section className="hero-modern-slider">
+      <div className="hero-slider">
+        <div className="hero-slide active">
+          <div className="hero-slide-inner">
+            <div className="slide-container">
+              <div className="hero-content">
+                <span className="hero-tag">Legal & Trademark Experts</span>
+
+                <h1 className="hero-title">
+                 We Simplify Filing with
+                  <span className="text-rotate">
+                    {slidingTexts.map((text, index) => (
+                      <span key={index}>{text}</span>
+                    ))}
+                  </span>
+                </h1>
+
+                <p className="hero-description">
+                  We help individuals, startups, and growing businesses handle their legal and compliance filings with confidence. From understanding requirements to preparing accurate documents and meeting regulatory deadlines, our expert-led process ensures every filing is completed correctly, efficiently, and without unnecessary delays.
+                </p>
+
+                {/* ACTION BUTTONS */}
+                <div className="hero-actions">
+                  <a href="/contact" className="btn-primary">
+                    Get Consultation
+                  </a>
+                  <a href="/about" className="btn-outline">
+                    Learn More
+                  </a>
+                </div>
               </div>
             </div>
           </div>
-        ))}
-
-        {/* PAGINATION */}
-        <div className="hero-pagination">
-          {slides.map((_, index) => (
-            <span
-              key={index}
-              className={`hero-dot ${
-                index === currentSlide ? "active" : ""
-              }`}
-              onClick={() => setCurrentSlide(index)}
-            />
-          ))}
-        </div>
-
-        {/* NEXT ARROW */}
-        <div
-          className="hero-arrow"
-          onClick={() =>
-            setCurrentSlide((prev) => (prev + 1) % slides.length)
-          }
-        >
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-            <path
-              d="M9 18L15 12L9 6"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
         </div>
       </div>
     </section>

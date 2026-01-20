@@ -265,26 +265,27 @@ function ServiceOfferings() {
         </h2>
 
         <ul className="services-modern-grid">
-          {services.map((service, index) => (
-            <li
-              key={index}
-              ref={el => (cardRefs.current[index] = el)}
-              className="service-modern-card fade-in-up"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <div className="service-modern-icon">
-                <img src={service.icon} alt={service.title} />
-              </div>
+  {services.map((service, index) => (
+    <li
+      key={index}
+      ref={el => (cardRefs.current[index] = el)}
+      className={`service-modern-card animate-${index % 4}`}
+      style={{ animationDelay: `${index * 0.12}s` }}
+    >
+      <div className="service-modern-icon">
+        <img src={service.icon} alt={service.title} />
+      </div>
 
-              <div className="service-modern-content">
-                <h4>{service.title}</h4>
-                <p>{service.description}</p>
-              </div>
+      <div className="service-modern-content">
+        <h4>{service.title}</h4>
+        <p>{service.description}</p>
+      </div>
 
-              <span className="service-modern-line"></span>
-            </li>
-          ))}
-        </ul>
+      <span className="service-modern-line"></span>
+    </li>
+  ))}
+</ul>
+
       </div>
     </section>
   );

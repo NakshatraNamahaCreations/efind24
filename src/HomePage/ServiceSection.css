@@ -1,0 +1,220 @@
+.process-section {
+  padding: 100px 0;
+  background: #ffffff;
+}
+
+.process-section h2{
+    color: #23418b;
+    font-size: 44px;
+    font-family: 'Libre Baskerville', serif;
+    text-align: center;
+    font-weight: 900;
+}
+
+.process-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* ================= LEFT & RIGHT WRAPS ================= */
+.process-left-wrap,
+.process-right-wrap {
+  position: relative;
+  padding-left: 40px;
+}
+
+.process-right-wrap {
+  padding-left: 0;
+  padding-right: 40px;
+}
+
+/* BASE VERTICAL LINE */
+.process-vertical-line {
+  position: absolute;
+  top: 0;
+  width: 6px;
+  height: 100%;
+  background: #e6e6e6;
+  border-radius: 6px;
+}
+
+.process-left-wrap .process-vertical-line {
+  left: 0;
+}
+
+.process-right-wrap .process-vertical-line {
+  right: 0;
+}
+
+/* ACTIVE SEGMENT */
+.process-vertical-line-active {
+  position: absolute;
+  width: 6px;
+  height: 90px;
+  background:  linear-gradient(90deg, #168831, #23418b);
+  border-radius: 6px;
+  transition: top 0.35s ease;
+}
+
+.process-left-wrap .process-vertical-line-active {
+  left: 0;
+}
+
+.process-right-wrap .process-vertical-line-active {
+  right: 0;
+}
+
+/* ================= STEPS ================= */
+.process-left,
+.process-right {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.process-step {
+  position: relative;
+  padding: 26px 32px;
+  background: #f7f7f7;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.process-step h4 {
+  margin: 0;
+  font-size: 18px;
+  color: #111;
+}
+
+.process-step.active {
+      background: linear-gradient(90deg, #168831, #23418b);
+}
+
+.process-step.active h4 {
+  color: #ffffff;
+}
+
+/* ================= ARROWS ================= */
+.process-left .process-step::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -18px;
+  transform: translateY(-50%);
+  border-top: 18px solid transparent;
+  border-bottom: 18px solid transparent;
+  border-left: 18px solid transparent;
+}
+
+.process-left .process-step.active::after {
+  border-left-color: #1f3c4b;
+}
+
+.process-right .process-step::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -18px;
+  transform: translateY(-50%);
+  border-top: 18px solid transparent;
+  border-bottom: 18px solid transparent;
+  border-right: 18px solid transparent;
+}
+
+.process-right .process-step.active::before {
+  border-right-color: #1f3c4b;
+}
+
+/* ================= CENTER ================= */
+.process-center {
+  text-align: center;
+}
+
+.process-image-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.process-image-ring {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  border: 2px solid #e5e5e5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.process-image-ring::after {
+  content: "";
+  position: absolute;
+  inset: -18px;
+  border-radius: 50%;
+  border: 2px solid #e5e5e5;
+}
+
+.process-image-ring img {
+  width: 100px;
+  height: 100px;
+}
+
+.process-content h3 {
+  font-size: 26px;
+  margin-bottom: 12px;
+  color: #23418b;
+}
+
+.process-content p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #666;
+}
+
+/* =========================
+   FADE UP ANIMATION
+========================= */
+.fade-up {
+  opacity: 0;
+  transform: translateY(18px);
+  animation: fadeUp 1s ease-out forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   ACTIVE TAB EMPHASIS
+========================= */
+.process-step {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.process-step.active {
+  transform: translateY(-2px) scale(1.02);
+}
+
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 991px) {
+  .process-container {
+    grid-template-columns: 1fr;
+  }
+
+  .process-vertical-line,
+  .process-vertical-line-active {
+    display: none;
+  }
+}

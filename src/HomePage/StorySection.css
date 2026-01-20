@@ -1,0 +1,130 @@
+.about-editorial {
+  padding: 110px 0 0;
+  background-color: #ffffff;
+}
+
+.about-wrap {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+/* LEFT INTRO */
+.about-eyebrow {
+  font-size: 12px;
+  letter-spacing: 2.5px;
+  font-weight: 600;
+  color: #168831;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 0px;
+}
+
+.about-heading {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #23418b;
+  font-family: 'Libre Baskerville', serif;
+}
+
+.about-lead{
+    color: #111827;
+}
+
+/* RIGHT CONTENT */
+/* ================= GLASS POINTS ================= */
+
+.about-points {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* GLASS CARD */
+.about-point {
+  position: relative;
+  padding: 0px 12px;
+  border-radius: 18px;
+  background: linear-gradient(
+    135deg,
+    rgba(247, 254, 244, 0.7),
+    rgba(236, 240, 249, 0.6)
+  );
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(226, 232, 240, 0.7);
+  transition: all 0.35s ease;
+}
+
+/* HOVER */
+.about-point:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.08);
+}
+
+/* ALTERNATE BORDER ACCENT */
+.about-point::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 18px;
+  bottom: 18px;
+  width: 4px;
+  border-radius: 4px;
+  background: linear-gradient(
+    180deg,
+    #168831,
+    #23418b
+  );
+}
+
+
+
+/* ================= TEXT ================= */
+
+.about-point h4 {
+  font-size: 19px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 10px;
+}
+
+.about-point p {
+  font-size: 15.5px;
+  line-height: 1.85;
+  color: #6b7280;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 991px) {
+  .about-wrap {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .about-content-block {
+    border-left: none;
+    padding-left: 0;
+  }
+
+  .about-heading {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-heading {
+    font-size: 30px;
+  }
+
+  .about-lead {
+    font-size: 16px;
+  }
+}
